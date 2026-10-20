@@ -1,3 +1,4 @@
+using Mono.Cecil.Cil;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -19,7 +20,7 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
 
     private Vector3 velocity;
-    private bool isGrounded;
+    public bool isGrounded;
 
     void Start()
     {
@@ -47,7 +48,14 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
-        controller.Move(move * speed * Time.deltaTime);
+        float currentSpeed = speed;
+
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            currentSpeed *= 2;
+        }
+
+        controller.Move(move * currentSpeed * Time.deltaTime);
 
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
@@ -81,8 +89,15 @@ public class PlayerMovement : MonoBehaviour
             controller.height = targetHeight;
         }
 
-        controller.center = new Vector3(0, controller.height / 2.0f, 0);
-
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    private void OnDrawGizmosSelected()
+    {
+        if (groundCheck == null) return;
+
+        Gizmos.color = Color.green;
+
+        Gizmos.DrawWireSphere(groundCheck.position, groundDistance);
     }
 }
