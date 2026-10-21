@@ -1,14 +1,16 @@
+using JetBrains.Annotations;
 using UnityEngine;
 
 // This is a Finite State Machine AI agent
 
-public enum State { Wander, Land, FindFood }
+public enum State { None, Wander, Land, WanderOnFoot, FindFood }
 
 public class PigeonAI : MonoBehaviour
 {
-    public State currentState = State.Wander;
+    public State currentState;
 
     private Vector3 destination;
+    private float groundLevel = 0.5f;
 
     private float speed = 2f;
 
@@ -23,6 +25,9 @@ public class PigeonAI : MonoBehaviour
     float energyTimer;
     float restTimer;
 
+    private float debugTimer = 1f;
+    private bool shownCurrentState = false;
+
 
     public Transform foodTarget;
 
@@ -30,12 +35,18 @@ public class PigeonAI : MonoBehaviour
 
     private void Start()
     {
-        hunger = maxHunger;
+        currentState = State.Wander;
+
+        //hunger = maxHunger;
+        hunger = 50f;
 
         if (foodTarget == null)
         {
             foodTarget = GameObject.FindWithTag("Worm").transform;
         }
+
+        // Prevents the pigeon heading straight for (0, 0, 0) on game start
+        destination = RandomPoint();
     }
 
     // Update is called once per frame
@@ -49,17 +60,35 @@ public class PigeonAI : MonoBehaviour
             case State.Land:
                 Land();
                 break;
+            case State.WanderOnFoot:
+                WanderOnFoot();
+                break;
             case State.FindFood:
                 FindFood();
                 break;
         }
 
-        hunger -= 5 * Time.deltaTime;
-        Debug.Log(hunger);
+        if (shownCurrentState == false)
+        {
+            Debug.Log($"[{this.name}] Current State: {currentState}");
+            shownCurrentState = true;
+        }
+
+        hunger -= 1 * Time.deltaTime;
+
+        debugTimer += Time.deltaTime;
+
+        if (debugTimer >= 1f)
+        {
+            Debug.Log($"[{this.name}] Hunger Level: {(int)hunger}");
+            debugTimer = 0f;
+        }
 
         energyTimer += Time.deltaTime;
         if (energyTimer >= 40f)
         {
+            Debug.Log($"[{this.name}]: Tired");
+
             isTired = true;
             isRested = false;
             energyTimer = 0f;
@@ -70,6 +99,8 @@ public class PigeonAI : MonoBehaviour
             restTimer += Time.deltaTime;
             if (restTimer >= 20f)
             {
+                Debug.Log($"[{this.name}]: Rested and ready");
+
                 isTired = false;
                 isRested = true;
                 restTimer = 0f;
@@ -79,19 +110,28 @@ public class PigeonAI : MonoBehaviour
 
     private Vector3 RandomPoint()
     {
+        Debug.Log($"[{this.name}]: Random point selected");
+
         // Set the destination to a random point in a zone
         return new Vector3(
-            Random.Range(-15.0f, 15.0f), 
-            Random.Range(0.5f, 20.0f), 
-            Random.Range(-24.0f, 24.0f)
+            Random.Range(-12.5f, 12.5f), 
+            Random.Range(groundLevel, 20.0f), 
+            Random.Range(-18f, 19f)
         );
     }
 
     public void Wander()
     {
+        if (isGrounded)
+        {
+            isGrounded = false;
+        }
+
         // If the distance between the current position and the destination position is less that 0.1
         if (Vector3.Distance(transform.position, destination) < 0.1f)
         {
+            Debug.Log($"[{this.name}]: Reached location");
+
             // Pick a new random destination
             destination = RandomPoint();
         }
@@ -120,20 +160,44 @@ public class PigeonAI : MonoBehaviour
 
     public void Land()
     {
+        Debug.Log($"[{this.name}]: landing");
+
+        if (Vector3.Distance(transform.position, ground.transform.position) > 0.1f)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                ground.transform.position,
+                speed * Time.deltaTime
+            );
+        }
+        else
+        {
+            Debug.Log($"[{this.name}]: landed");
+            currentState = State.WanderOnFoot;
+        }
+    }
+
+    public void WanderOnFoot()
+    {
+        if (!isGrounded)
+        {
+            transform.position = new Vector3(transform.position.x, 0.5f, transform.position.z);
+            isGrounded = true;
+        }
+
+        // If the distance between the current position and the destination position is less that 0.1
+        if (Vector3.Distance(transform.position, destination) < 0.1f)
+        {
+            destination = RandomPoint();
+        }
+
         transform.position = Vector3.MoveTowards(
             transform.position,
-            ground.transform.position,
+            new Vector3(destination.x, groundLevel, destination.z),
             speed * Time.deltaTime
         );
 
-        if (isGrounded)
-        {
-            StayOnGround();
-        }
-
-        Debug.Log("Pigeon landed");
-
-        if (hunger <= 40)
+        if (hunger <= hungryThreshold)
         {
             currentState = State.FindFood;
         }
@@ -142,17 +206,6 @@ public class PigeonAI : MonoBehaviour
         {
             currentState = State.Wander;
         }
-    }
-
-    private void StayOnGround()
-    {
-        Vector3 walkToPoint = RandomPoint();
-
-        transform.position = Vector3.MoveTowards(
-            transform.position,
-            new Vector3(walkToPoint.x, 0.5f, walkToPoint.z),
-            speed * Time.deltaTime
-        );
     }
 
     // Could have "hunger" which ticks down and gives pigeon a reason to land
@@ -164,7 +217,18 @@ public class PigeonAI : MonoBehaviour
             foodTarget = GameObject.FindWithTag("Worm").transform;
         }
 
-        // MoveTowardsFood();
+        if (isGrounded)
+        {
+            transform.position = Vector3.MoveTowards(
+                transform.position,
+                new Vector3(foodTarget.transform.position.x, groundLevel, foodTarget.transform.position.z),
+                speed * Time.deltaTime
+            );
+        }
+        else
+        {
+            currentState = State.Land;
+        }
 
         if (reachedFood)
         {
@@ -181,20 +245,20 @@ public class PigeonAI : MonoBehaviour
     {
         if (other.CompareTag("Worm"))
         {
-            Debug.Log("PigeonAI is near worm");
+            Debug.Log($"[{this.name}]: is close enough to worm to eat");
             reachedFood = true;
-        }
-
-        if (other.CompareTag("Ground"))
-        {
-            Debug.Log("PigeonAI is on the ground");
-            isGrounded = true;
         }
     }
 
     private void Eat()
     {
         hunger += 50f;
+
+        Destroy(foodTarget.gameObject);
+
+        foodTarget = null;
+
+        Debug.Log($"[{this.name}]: ate a worm");
 
         if (hunger >= maxHunger)
         {
