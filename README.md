@@ -12,6 +12,9 @@ Garden of Agents is a demo scene set in a back garden with a multitude of creatu
 * Perception Agent (Agents & Environments)
     * Dog - Neutral/aggressive
 
+* Pathfinding AI
+    * Snail - Passive
+
 ### Target Game Engine
 * Unity
 
@@ -27,6 +30,8 @@ Trello board: [Garden of Agents](https://trello.com/b/SeBHeLrO/garden-of-agents)
 1. Lists in C# - https://www.geeksforgeeks.org/c-sharp/c-sharp-adding-an-element-to-the-list/
 
 2. https://learn.unity.com/tutorial/instantiate
+
+---
 
 ## TODO: Add the following details and update regularly
 
