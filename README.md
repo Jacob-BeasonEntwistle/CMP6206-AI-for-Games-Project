@@ -21,6 +21,8 @@ Garden of Agents is a demo scene set in a back garden with a multitude of creatu
 
 I'm using Trello to track my progress throughout the project, creating a list of tasks that help with prioritising the development of key features and AI as well as keep track of what has been completed.
 
+[Garden of Agents](https://trello.com/b/SeBHeLrO/garden-of-agents)
+
 
 ## TODO: Add the following details and update regularly
 
