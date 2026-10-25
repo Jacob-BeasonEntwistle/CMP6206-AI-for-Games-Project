@@ -1,122 +1,70 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class MouseLook : MonoBehaviour
 {
-    private float mouseSens = 250f;
+    [SerializeField] private float mouseSens = 0.1f;
+    [SerializeField] private float maxMouseDelta = 50f;
 
     public Transform playerBody;
     public Transform cameraHolder;
 
+    private float xRotation;
     private float standingHeight = 1.15f;
     private float crouchedHeight = 0.575f;
-
     private float crouchSpeed = 10f;
 
-    // Stores manual rotation
-    private float xRotation;
-    private float yRotation;
-
-    private bool justLocked;
-    private bool ignoreNextFrame;
-
-    // Start is called before the first frame update
     void Start()
     {
-        // Unlock the cursor on start
-        Cursor.lockState = CursorLockMode.None;
-        Cursor.visible = true;
+        Cursor.lockState = CursorLockMode.Locked;
+        Cursor.visible = false;
 
-        // Store the initial camera rotation
         xRotation = transform.localEulerAngles.x;
-
         if (xRotation > 180f)
-        {
             xRotation -= 360f;
-        }
-
-        // Store initial player rotation
-        yRotation = playerBody.eulerAngles.y;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        // Ignore the first frame after regaining focus
-        if (ignoreNextFrame)
-        {
-            ignoreNextFrame = false;
+        if (Mouse.current == null || Keyboard.current == null)
             return;
-        }
 
-        // Lock the cursor to the screen on click (LMB)
-        if (Input.GetMouseButtonDown(0))
-        {
-            Cursor.lockState = CursorLockMode.Locked;
-            Cursor.visible = false;
-            justLocked = true;
-        }
-
-        // Unlock cursor with Escape
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            Cursor.lockState = CursorLockMode.None;
-            Cursor.visible = true;
+        // Don't rotate while the game window is unfocused.
+        if (!Application.isFocused ||
+            Cursor.lockState != CursorLockMode.Locked)
             return;
-        }
 
-        // Ignore first frame after locking
-        if (justLocked)
-        {
-            justLocked = false;
-            return;
-        }
+        Vector2 delta = Mouse.current.delta.ReadValue();
 
-        // Read the raw mouse movement in x and y axis
-        float mouseX = Input.GetAxisRaw("Mouse X") * mouseSens * Time.deltaTime;
-        float mouseY = Input.GetAxisRaw("Mouse Y") * mouseSens * Time.deltaTime;
+        // Ignore unusually large input spikes.
+        delta.x = Mathf.Clamp(delta.x, -maxMouseDelta, maxMouseDelta);
+        delta.y = Mathf.Clamp(delta.y, -maxMouseDelta, maxMouseDelta);
 
-        // Ignore huge spikes in mouse movements
-        if (Mathf.Abs(mouseX) > 20f || Mathf.Abs(mouseY) > 20f)
-        {
-            return;
-        }
-
-        xRotation -= mouseY;
+        xRotation -= delta.y * mouseSens;
         xRotation = Mathf.Clamp(xRotation, -90f, 90f);
 
         transform.localRotation = Quaternion.Euler(xRotation, 0f, 0f);
 
-        yRotation += mouseX;
-        playerBody.rotation = Quaternion.Euler(0f, yRotation, 0f);
+        if (playerBody != null)
+            playerBody.Rotate(Vector3.up * delta.x * mouseSens);
 
-        float targetHeight;
+        bool crouching =
+            Keyboard.current.leftCtrlKey.isPressed ||
+            Keyboard.current.cKey.isPressed;
 
-        if (Input.GetButton("Crouch"))
+        float targetHeight = crouching ? crouchedHeight : standingHeight;
+
+        if (cameraHolder != null)
         {
-            targetHeight = crouchedHeight;
-        }
-        else
-        {
-            targetHeight = standingHeight;
-        }
+            Vector3 pos = cameraHolder.localPosition;
+            pos.y = Mathf.Lerp(
+                pos.y, targetHeight, crouchSpeed * Time.deltaTime
+            );
 
-        float newHeight = Mathf.Lerp(cameraHolder.localPosition.y, targetHeight, crouchSpeed * Time.deltaTime);
+            if (Mathf.Abs(pos.y - targetHeight) < 0.01f)
+                pos.y = targetHeight;
 
-        if (Mathf.Abs(newHeight - targetHeight) < 0.01f)
-        {
-            newHeight = targetHeight;
-        }
-
-        cameraHolder.localPosition = new Vector3(0f, newHeight, 0f);
-    }
-
-    void OnApplicationFocus(bool hasFocus)
-    {
-        if (hasFocus)
-        {
-            ignoreNextFrame = true;
+            cameraHolder.localPosition = pos;
         }
     }
 }

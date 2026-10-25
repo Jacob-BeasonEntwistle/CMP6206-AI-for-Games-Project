@@ -40,9 +40,15 @@ public class PigeonAI : MonoBehaviour
         //hunger = maxHunger;
         hunger = 50f;
 
+        // Doesn't require there to be a worm, but if there is, it sets it to the food target
         if (foodTarget == null)
         {
-            foodTarget = GameObject.FindWithTag("Worm").transform;
+            GameObject worm = GameObject.FindWithTag("Worm");
+
+            if (worm != null)
+            {
+                foodTarget = worm.transform;
+            }
         }
 
         // Prevents the pigeon heading straight for (0, 0, 0) on game start
@@ -120,6 +126,17 @@ public class PigeonAI : MonoBehaviour
         );
     }
 
+    // Turns the pigeon AI to face the direction it's flying in
+    private void TurnToFace(Vector3 target)
+    {
+        // (transform.pos - destination because pigeon mesh is backwards)
+        Quaternion rotation = Quaternion.LookRotation(transform.position - target, Vector3.up);
+        transform.rotation = rotation;
+        
+        // Use this to slowly turn towards location - might be useful for realistic turning
+        // transform.rotation = Quaternion.Slerp(transform.rotation, rotation, Time.deltaTime);
+    }
+
     public void Wander()
     {
         if (isGrounded)
@@ -135,6 +152,8 @@ public class PigeonAI : MonoBehaviour
             // Pick a new random destination
             destination = RandomPoint();
         }
+
+        TurnToFace(destination);
 
         // Move the pigeon towards the chosen destination at the set speed
         transform.position = Vector3.MoveTowards(
@@ -164,6 +183,8 @@ public class PigeonAI : MonoBehaviour
 
         if (Vector3.Distance(transform.position, ground.transform.position) > 0.1f)
         {
+            TurnToFace(ground.transform.position);
+
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 ground.transform.position,
@@ -191,6 +212,8 @@ public class PigeonAI : MonoBehaviour
             destination = RandomPoint();
         }
 
+        TurnToFace(destination);
+
         transform.position = Vector3.MoveTowards(
             transform.position,
             new Vector3(destination.x, groundLevel, destination.z),
@@ -212,13 +235,21 @@ public class PigeonAI : MonoBehaviour
     // Worm spotted, pigeon hunger bar a certain threshold, chase worm
     public void FindFood()
     {
+        // Looks for worm but doesn't crash if there is none
         if (foodTarget == null)
         {
-            foodTarget = GameObject.FindWithTag("Worm").transform;
+            GameObject worm = GameObject.FindWithTag("Worm");
+
+            if (worm != null)
+            {
+                foodTarget = worm.transform;
+            }
         }
 
         if (isGrounded)
         {
+            TurnToFace(foodTarget.position);
+
             transform.position = Vector3.MoveTowards(
                 transform.position,
                 new Vector3(foodTarget.transform.position.x, groundLevel, foodTarget.transform.position.z),

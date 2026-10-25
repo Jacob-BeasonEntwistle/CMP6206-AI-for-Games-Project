@@ -2,10 +2,11 @@
 
 Garden of Agents is a demo scene set in a back garden with a multitude of creatures and critters that traverse the ground and patrol the air. 
 
-### AI that will be implemented
+### Implemented AI
 * Finite State Machine (FSM)
     * Pigeon - Passive
 
+### AI that will be implemented
 * Behaviour Tree
     * Bee - Neutral (passive until threatened)
 
@@ -28,8 +29,8 @@ Trello board: [Garden of Agents](https://trello.com/b/SeBHeLrO/garden-of-agents)
 
 ### References
 1. Lists in C# - https://www.geeksforgeeks.org/c-sharp/c-sharp-adding-an-element-to-the-list/
-
-2. https://learn.unity.com/tutorial/instantiate
+2. Instantiating Prefabs - https://learn.unity.com/tutorial/instantiate
+3. Looking towards a point - https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Quaternion.LookRotation.html
 
 ---
 

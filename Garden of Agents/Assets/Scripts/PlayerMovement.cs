@@ -1,7 +1,5 @@
-using Mono.Cecil.Cil;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -28,40 +26,61 @@ public class PlayerMovement : MonoBehaviour
         jumpHeight = 1.0f;
         gravity = -9.81f;
         groundDistance = 0.4f;
+
         defaultHeight = controller.height;
         crouchHeight = defaultHeight / 2f;
         crouchSpeed = 10f;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        isGrounded = Physics.CheckSphere(groundCheck.position, groundDistance, groundMask);
+        if (Keyboard.current == null)
+            return;
+
+        isGrounded = Physics.CheckSphere(
+            groundCheck.position,
+            groundDistance,
+            groundMask
+        );
 
         if (isGrounded && velocity.y < 0)
         {
             velocity.y = -2f;
         }
 
-        float x = Input.GetAxis("Horizontal");
-        float z = Input.GetAxis("Vertical");
+        // WASD movement
+        float x = 0f;
+        float z = 0f;
+
+        if (Keyboard.current.aKey.isPressed) x -= 1f;
+        if (Keyboard.current.dKey.isPressed) x += 1f;
+        if (Keyboard.current.sKey.isPressed) z -= 1f;
+        if (Keyboard.current.wKey.isPressed) z += 1f;
 
         Vector3 move = transform.right * x + transform.forward * z;
 
+        // Prevent faster diagonal movement
+        move = Vector3.ClampMagnitude(move, 1f);
+
         float currentSpeed = speed;
 
-        if (Input.GetKey(KeyCode.LeftShift))
+        // Sprint
+        if (Keyboard.current.leftShiftKey.isPressed)
         {
-            currentSpeed *= 2;
+            currentSpeed *= 2f;
         }
 
         controller.Move(move * currentSpeed * Time.deltaTime);
 
-        if (Input.GetButtonDown("Jump") && isGrounded)
+        // Jump
+        if (Keyboard.current.spaceKey.wasPressedThisFrame && isGrounded)
         {
-            velocity.y = Mathf.Sqrt(jumpHeight * -2.0f * gravity);
+            velocity.y = Mathf.Sqrt(
+                jumpHeight * -2f * gravity
+            );
         }
 
+        // Gravity
         if (velocity.y < 0)
         {
             velocity.y += gravity * 2.5f * Time.deltaTime;
@@ -71,18 +90,16 @@ public class PlayerMovement : MonoBehaviour
             velocity.y += gravity * Time.deltaTime;
         }
 
-        float targetHeight;
+        // Crouch with Left Ctrl or C
+        bool crouching = Keyboard.current.leftCtrlKey.isPressed || Keyboard.current.cKey.isPressed;
 
-        if (Input.GetButton("Crouch"))
-        {
-            targetHeight = crouchHeight;
-        }
-        else
-        {
-            targetHeight = defaultHeight;
-        }
+        float targetHeight = crouching ? crouchHeight : defaultHeight;
 
-        controller.height = Mathf.Lerp(controller.height, targetHeight, crouchSpeed * Time.deltaTime);
+        controller.height = Mathf.Lerp(
+            controller.height,
+            targetHeight,
+            crouchSpeed * Time.deltaTime
+        );
 
         if (Mathf.Abs(controller.height - targetHeight) < 0.01f)
         {
