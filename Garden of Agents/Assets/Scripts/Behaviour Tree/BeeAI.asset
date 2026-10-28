@@ -1,0 +1,1192 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-7627645078566634896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: db920e62f70f420bb33c771449926fa4, type: 3}
+  m_Name: BeeAI
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraph
+  Graphs:
+  - rid: 8455035058607620282
+  m_DebugInfo: {fileID: 7390184367564850268}
+  m_WasCompileWithPlaceholderNode: 0
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 8455035058607620282
+      type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        AuthoringAssetID:
+          m_Value0: 6070447639584981926
+          m_Value1: 3851064245641744921
+        m_DebugInfo: {fileID: 7390184367564850268}
+        BlackboardReference:
+          rid: 8455035058607620283
+        BlackboardGroupReferences: []
+        Root:
+          rid: 8455035060457046538
+        m_VersionTimestamp: 639288027055364499
+    - rid: 8455035058607620283
+      type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Blackboard:
+          rid: 8455035058607620285
+        m_Source: {fileID: 1647689969320190158}
+    - rid: 8455035058607620285
+      type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        m_Variables:
+        - rid: 8455035060457046540
+        - rid: 8455035060457046541
+        - rid: 8455035060457046542
+        - rid: 8455035060457046543
+        - rid: 8455035060457046544
+        - rid: 8455035060457046545
+        - rid: 8455035060457046546
+        - rid: 8455035060457046547
+    - rid: 8455035060457046397
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 2
+    - rid: 8455035060457046538
+      type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 10944769562587728727
+          m_Value1: 18444813125141789538
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: -2
+        m_Child:
+          rid: 8455035060457046539
+        Repeat: 1
+        AllowMultipleRepeatsPerTick: 0
+    - rid: 8455035060457046539
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 3769432706145299146
+          m_Value1: 8075283837728528235
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046538
+        m_Children:
+        - rid: 8455035060457046548
+        m_RegisteredObservers: []
+    - rid: 8455035060457046540
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 8455035060457046541
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10274173872782565125
+          m_Value1: 14632145828776391377
+        Name: Beehive
+        m_Value: {fileID: 0}
+    - rid: 8455035060457046542
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 6787119523355353181
+          m_Value1: 7569433577561809183
+        Name: beeNectar
+        m_Value: 0
+    - rid: 8455035060457046543
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 8654477992914128131
+          m_Value1: 4401849051014918286
+        Name: beePollen
+        m_Value: 0
+    - rid: 8455035060457046544
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 16213035026203648250
+          m_Value1: 11906225425605505666
+        Name: hiveNectar
+        m_Value: 0
+    - rid: 8455035060457046545
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4337814984913212035
+          m_Value1: 4285928832938750784
+        Name: hivePollen
+        m_Value: 0
+    - rid: 8455035060457046546
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4145302018458630113
+          m_Value1: 553365531426583762
+        Name: needResources
+        m_Value: 0
+    - rid: 8455035060457046547
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7202535139693848895
+          m_Value1: 14110960782042665910
+        Name: inventoryFull
+        m_Value: 0
+    - rid: 8455035060457046548
+      type: {class: ConditionalGuardModifier, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 6032778568423621990
+          m_Value1: 14332406028834352601
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046539
+        m_Child:
+          rid: 8455035060457046549
+        m_Conditions:
+        - rid: 8455035060457046550
+        m_RequiresAllConditions: 0
+        m_ObserverType: 0
+    - rid: 8455035060457046549
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 3364958771659699919
+          m_Value1: 1354700269268098622
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046548
+        m_Children:
+        - rid: 8455035060457046551
+        - rid: 8455035060457046552
+        - rid: 8455035060457046553
+        - rid: 8455035060457046554
+        - rid: 8455035060457046555
+        m_RegisteredObservers: []
+    - rid: 8455035060457046550
+      type: {class: IsAtHiveCondition, ns: , asm: Assembly-CSharp}
+      data:
+        Graph:
+          rid: 8455035058607620282
+        Bee:
+          rid: 8455035060457046540
+        Hive:
+          rid: 8455035060457046541
+    - rid: 8455035060457046551
+      type: {class: GetHiveResourcesAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 6935202148964697890
+          m_Value1: 6233555431513715513
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046549
+        HiveNectarCount:
+          rid: 8455035060457046544
+        HivePollenCount:
+          rid: 8455035060457046545
+        Beehive:
+          rid: 8455035060457046541
+    - rid: 8455035060457046552
+      type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 5374750997278905196
+          m_Value1: 5498160023759841309
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046549
+        Variable:
+          rid: 8455035060457046544
+    - rid: 8455035060457046553
+      type: {class: WaitAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 8974828327480988465
+          m_Value1: 9416819911002323389
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046549
+        SecondsToWait:
+          rid: 8455035060457046397
+    - rid: 8455035060457046554
+      type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 7032955797963376853
+          m_Value1: 16526178774395321916
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046549
+        Variable:
+          rid: 8455035060457046545
+    - rid: 8455035060457046555
+      type: {class: ConditionalGuardModifier, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 12851480913575653677
+          m_Value1: 13517150518771040321
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 8455035060457046549
+        m_Child:
+          rid: -2
+        m_Conditions: []
+        m_RequiresAllConditions: 0
+        m_ObserverType: 0
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bad8f2220607dac4db5082ff333fafb8, type: 3}
+  m_Name: BeeAI
+  m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorAuthoringGraph
+  Blackboard: {fileID: 1955005502381430313}
+  m_Description: 
+  m_Nodes:
+  - rid: 8455035058607620287
+  - rid: 8455035058607620307
+  - rid: 8455035058607620353
+  - rid: 8455035058607620629
+  - rid: 8455035058607620696
+  - rid: 8455035058607620736
+  - rid: 8455035058607620971
+  - rid: 8455035060457046377
+  - rid: 8455035060457046463
+  - rid: 8455035060457046503
+  m_VersionTimestamp: 639288027055364499
+  m_SerializedVersion: 3
+  m_DebugInfo: {fileID: 7390184367564850268}
+  m_RuntimeGraph: {fileID: -7627645078566634896}
+  AssetID:
+    m_Value0: 6070447639584981926
+    m_Value1: 3851064245641744921
+  Story:
+    Story: 
+    StoryVariableNames: []
+    Variables: []
+  m_NodeModelsInfo:
+  - Name: On Start
+    Story: 
+    RuntimeTypeString: Unity.Behavior.Start, Unity.Behavior, Version=0.0.0.0, Culture=neutral,
+      PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 3335272451348827663
+      m_Value1: 11549843281177505721
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Conditional Guard (Modifier)
+    Story: 
+    RuntimeTypeString: Unity.Behavior.ConditionalGuardModifier, Unity.Behavior, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 3048858705937822632
+      m_Value1: 3282115049331433116
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Sequence
+    Story: 
+    RuntimeTypeString: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 10181448252506100447
+      m_Value1: 8737116843063128493
+    Variables: []
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Wait (Seconds)
+    Story: Wait for [SecondsToWait] seconds
+    RuntimeTypeString: Unity.Behavior.WaitAction, Unity.Behavior, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 7729581452106168333
+      m_Value1: 8820302366443624372
+    Variables:
+    - Name: SecondsToWait
+      Type:
+        m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: GetHiveResources
+    Story: 'Get [HiveNectarCount] and [HivePollenCount] from [Beehive]'
+    RuntimeTypeString: GetHiveResourcesAction, Assembly-CSharp, Version=0.0.0.0,
+      Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 1717387057791022012
+      m_Value1: 10455563367758479250
+    Variables:
+    - Name: HiveNectarCount
+      Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: HivePollenCount
+      Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: Beehive
+      Type:
+        m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
+    IsPlaceholder: 0
+  - Name: Log Variable
+    Story: Log [variable] to the console
+    RuntimeTypeString: Unity.Behavior.LogVariableToConsoleAction, Unity.Behavior,
+      Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+    RuntimeTypeID:
+      m_Value0: 14362779694071371193
+      m_Value1: 7707181868946836709
+    Variables:
+    - Name: Variable
+      Type:
+        m_SerializableType: Unity.Behavior.BlackboardVariable, Unity.Behavior, Version=0.0.0.0,
+          Culture=neutral, PublicKeyToken=null
+      Tooltip: 
+    NamedChildren: []
+    IsPlaceholder: 0
+  m_Blackboards: []
+  m_MainBlackboardAuthoringAsset: {fileID: 1955005502381430313}
+  m_CommandBuffer:
+    m_Commands: []
+  m_SubgraphsInfo: []
+  m_BlackboardMissingManagedRef: 0
+  m_GraphMissingManagedRef: 0
+  m_HasMissingTypeInManagedRef: 0
+  m_EnumDependencyCache:
+    Entries: []
+  references:
+    version: 2
+    RefIds:
+    - rid: -2
+      type: {class: , ns: , asm: }
+    - rid: 8455035058607620287
+      type: {class: StartNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 6.4000006, y: -98.4}
+        ID:
+          m_Value0: 10944769562587728727
+          m_Value1: 18444813125141789538
+        Parents: []
+        PortModels:
+        - rid: 8455035058607620288
+        NodeType:
+          m_SerializableType: Unity.Behavior.Start, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 3335272451348827663
+          m_Value1: 11549843281177505721
+        m_FieldValues: []
+        Repeat: 1
+        AllowMultipleRepeatsPerTick: 0
+    - rid: 8455035058607620288
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620287
+        m_Connections:
+        - rid: 8455035058607620697
+    - rid: 8455035058607620307
+      type: {class: ConditionalGuardNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -233.3004, y: 96.90001}
+        ID:
+          m_Value0: 6032778568423621990
+          m_Value1: 14332406028834352601
+        Parents: []
+        PortModels:
+        - rid: 8455035058607620308
+        - rid: 8455035058607620309
+        NodeType:
+          m_SerializableType: Unity.Behavior.ConditionalGuardModifier, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 3048858705937822632
+          m_Value1: 3282115049331433116
+        m_FieldValues: []
+        m_Mode: 1
+        <ConditionModels>k__BackingField:
+        - rid: 8455035058607620315
+        <RequiresAllConditionsTrue>k__BackingField: 0
+        <ShouldTruncateNodeUI>k__BackingField: 0
+        <ObserverType>k__BackingField: 0
+    - rid: 8455035058607620308
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620307
+        m_Connections:
+        - rid: 8455035058607620698
+    - rid: 8455035058607620309
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620307
+        m_Connections:
+        - rid: 8455035058607620354
+    - rid: 8455035058607620315
+      type: {class: ConditionModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        ConditionType:
+          m_SerializableType: IsAtHiveCondition, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        ConditionTypeID:
+          m_Value0: 11726472266529183455
+          m_Value1: 17555187781003542936
+        NodeModel:
+          rid: 8455035058607620307
+        m_FieldValues:
+        - rid: 8455035058607620316
+        - rid: 8455035058607620317
+        OperatorFieldModel:
+          rid: -2
+    - rid: 8455035058607620316
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Bee
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 8455035058607620318
+        LinkedVariable:
+          rid: 8455035058607620322
+    - rid: 8455035058607620317
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Hive
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 8455035058607620319
+        LinkedVariable:
+          rid: 8455035058607620333
+    - rid: 8455035058607620318
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620319
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620322
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620333
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 10274173872782565125
+          m_Value1: 14632145828776391377
+        Name: Hive
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620353
+      type: {class: CompositeNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -231.7501, y: 182.24991}
+        ID:
+          m_Value0: 3364958771659699919
+          m_Value1: 1354700269268098622
+        Parents: []
+        PortModels:
+        - rid: 8455035058607620354
+        - rid: 8455035058607620355
+        NodeType:
+          m_SerializableType: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 10181448252506100447
+          m_Value1: 8737116843063128493
+        m_FieldValues: []
+    - rid: 8455035058607620354
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620353
+        m_Connections:
+        - rid: 8455035058607620309
+    - rid: 8455035058607620355
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620353
+        m_Connections:
+        - rid: 8455035060457046378
+        - rid: 8455035058607620737
+        - rid: 8455035058607620972
+        - rid: 8455035060457046464
+        - rid: 8455035060457046504
+    - rid: 8455035058607620629
+      type: {class: StickyNoteModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        Position: {x: -427.7488, y: 131.05002}
+        ID:
+          m_Value0: 18297186181490875095
+          m_Value1: 6046158815514008788
+        Parents: []
+        PortModels: []
+        Text: Check hive's resources
+    - rid: 8455035058607620696
+      type: {class: CompositeNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 6.649995, y: 15.850013}
+        ID:
+          m_Value0: 3769432706145299146
+          m_Value1: 8075283837728528235
+        Parents: []
+        PortModels:
+        - rid: 8455035058607620697
+        - rid: 8455035058607620698
+        NodeType:
+          m_SerializableType: Unity.Behavior.SequenceComposite, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 10181448252506100447
+          m_Value1: 8737116843063128493
+        m_FieldValues: []
+    - rid: 8455035058607620697
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620696
+        m_Connections:
+        - rid: 8455035058607620288
+    - rid: 8455035058607620698
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620696
+        m_Connections:
+        - rid: 8455035058607620308
+    - rid: 8455035058607620736
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -117.35016, y: 284.65012}
+        ID:
+          m_Value0: 8974828327480988465
+          m_Value1: 9416819911002323389
+        Parents: []
+        PortModels:
+        - rid: 8455035058607620737
+        - rid: 8455035058607620738
+        NodeType:
+          m_SerializableType: Unity.Behavior.WaitAction, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 7729581452106168333
+          m_Value1: 8820302366443624372
+        m_FieldValues:
+        - rid: 8455035058607620739
+    - rid: 8455035058607620737
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620736
+        m_Connections:
+        - rid: 8455035058607620355
+    - rid: 8455035058607620738
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620736
+        m_Connections: []
+    - rid: 8455035058607620739
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: SecondsToWait
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 8455035058607620740
+        LinkedVariable:
+          rid: -2
+    - rid: 8455035058607620740
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 2
+    - rid: 8455035058607620971
+      type: {class: ConditionalGuardNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: 91.806915, y: 283.16382}
+        ID:
+          m_Value0: 12851480913575653677
+          m_Value1: 13517150518771040321
+        Parents: []
+        PortModels:
+        - rid: 8455035058607620972
+        - rid: 8455035058607620973
+        NodeType:
+          m_SerializableType: Unity.Behavior.ConditionalGuardModifier, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 3048858705937822632
+          m_Value1: 3282115049331433116
+        m_FieldValues: []
+        m_Mode: 1
+        <ConditionModels>k__BackingField: []
+        <RequiresAllConditionsTrue>k__BackingField: 0
+        <ShouldTruncateNodeUI>k__BackingField: 0
+        <ObserverType>k__BackingField: 0
+    - rid: 8455035058607620972
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620971
+        m_Connections:
+        - rid: 8455035058607620355
+    - rid: 8455035058607620973
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035058607620971
+        m_Connections: []
+    - rid: 8455035060457046377
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -382.37125, y: 284.48175}
+        ID:
+          m_Value0: 6935202148964697890
+          m_Value1: 6233555431513715513
+        Parents: []
+        PortModels:
+        - rid: 8455035060457046378
+        - rid: 8455035060457046379
+        NodeType:
+          m_SerializableType: GetHiveResourcesAction, Assembly-CSharp, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 1717387057791022012
+          m_Value1: 10455563367758479250
+        m_FieldValues:
+        - rid: 8455035060457046380
+        - rid: 8455035060457046381
+        - rid: 8455035060457046382
+    - rid: 8455035060457046378
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035060457046377
+        m_Connections:
+        - rid: 8455035058607620355
+    - rid: 8455035060457046379
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035060457046377
+        m_Connections: []
+    - rid: 8455035060457046380
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: HiveNectarCount
+        Type:
+          m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 8455035060457046383
+        LinkedVariable:
+          rid: 8455035060457046406
+    - rid: 8455035060457046381
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: HivePollenCount
+        Type:
+          m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 8455035060457046384
+        LinkedVariable:
+          rid: 8455035060457046423
+    - rid: 8455035060457046382
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Beehive
+        Type:
+          m_SerializableType: UnityEngine.GameObject, UnityEngine.CoreModule, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        LocalValue:
+          rid: 8455035060457046385
+        LinkedVariable:
+          rid: 8455035060457046386
+    - rid: 8455035060457046383
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 8455035060457046384
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 8455035060457046385
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: {fileID: 0}
+    - rid: 8455035060457046386
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 10274173872782565125
+          m_Value1: 14632145828776391377
+        Name: Beehive
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 8455035060457046406
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 16213035026203648250
+          m_Value1: 11906225425605505666
+        Name: hiveNectar
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035060457046423
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 4337814984913212035
+          m_Value1: 4285928832938750784
+        Name: hivePollen
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035060457046463
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -299.97104, y: 384.48242}
+        ID:
+          m_Value0: 5374750997278905196
+          m_Value1: 5498160023759841309
+        Parents: []
+        PortModels:
+        - rid: 8455035060457046464
+        - rid: 8455035060457046465
+        NodeType:
+          m_SerializableType: Unity.Behavior.LogVariableToConsoleAction, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 14362779694071371193
+          m_Value1: 7707181868946836709
+        m_FieldValues:
+        - rid: 8455035060457046474
+    - rid: 8455035060457046464
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035060457046463
+        m_Connections:
+        - rid: 8455035058607620355
+    - rid: 8455035060457046465
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035060457046463
+        m_Connections: []
+    - rid: 8455035060457046474
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Variable
+        Type:
+          m_SerializableType: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 8455035060457046475
+        LinkedVariable:
+          rid: 8455035060457046406
+    - rid: 8455035060457046475
+      type: {class: 'BlackboardVariable`1[[System.Object, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+    - rid: 8455035060457046503
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -91.17081, y: 386.08215}
+        ID:
+          m_Value0: 7032955797963376853
+          m_Value1: 16526178774395321916
+        Parents: []
+        PortModels:
+        - rid: 8455035060457046504
+        - rid: 8455035060457046505
+        NodeType:
+          m_SerializableType: Unity.Behavior.LogVariableToConsoleAction, Unity.Behavior,
+            Version=0.0.0.0, Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 14362779694071371193
+          m_Value1: 7707181868946836709
+        m_FieldValues:
+        - rid: 8455035060457046506
+    - rid: 8455035060457046504
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035060457046503
+        m_Connections:
+        - rid: 8455035058607620355
+    - rid: 8455035060457046505
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 8455035060457046503
+        m_Connections: []
+    - rid: 8455035060457046506
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: Variable
+        Type:
+          m_SerializableType: System.Object, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 8455035060457046507
+        LinkedVariable:
+          rid: 8455035060457046423
+    - rid: 8455035060457046507
+      type: {class: 'BlackboardVariable`1[[System.Object, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+--- !u!114 &1647689969320190158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
+  m_Name: BeeAI Blackboard
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
+  VersionTimestamp: 639288027048392343
+  AssetID:
+    m_Value0: 6070447639584981926
+    m_Value1: 3851064245641744921
+  m_Blackboard:
+    m_Variables:
+    - rid: 8455035058607620289
+    - rid: 8455035058607620329
+    - rid: 8455035058607620370
+    - rid: 8455035058607620389
+    - rid: 8455035058607620491
+    - rid: 8455035058607620514
+    - rid: 8455035058607620842
+    - rid: 8455035058607620954
+  m_SharedBlackboardVariableGuids: []
+  references:
+    version: 2
+    RefIds:
+    - rid: 8455035058607620289
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620329
+      type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 10274173872782565125
+          m_Value1: 14632145828776391377
+        Name: Beehive
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620370
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 6787119523355353181
+          m_Value1: 7569433577561809183
+        Name: beeNectar
+        m_Value: 0
+    - rid: 8455035058607620389
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 8654477992914128131
+          m_Value1: 4401849051014918286
+        Name: beePollen
+        m_Value: 0
+    - rid: 8455035058607620491
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 16213035026203648250
+          m_Value1: 11906225425605505666
+        Name: hiveNectar
+        m_Value: 0
+    - rid: 8455035058607620514
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4337814984913212035
+          m_Value1: 4285928832938750784
+        Name: hivePollen
+        m_Value: 0
+    - rid: 8455035058607620842
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 4145302018458630113
+          m_Value1: 553365531426583762
+        Name: needResources
+        m_Value: 0
+    - rid: 8455035058607620954
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 7202535139693848895
+          m_Value1: 14110960782042665910
+        Name: inventoryFull
+        m_Value: 0
+--- !u!114 &1955005502381430313
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2dd922ae02c94c87a66e46a10a7319b9, type: 3}
+  m_Name: BeeAI Blackboard
+  m_EditorClassIdentifier: Unity.Behavior.Authoring::Unity.Behavior.BehaviorBlackboardAuthoringAsset
+  AssetID:
+    m_Value0: 6070447639584981926
+    m_Value1: 3851064245641744921
+  m_Variables:
+  - rid: 8455035058607620290
+  - rid: 8455035058607620325
+  - rid: 8455035058607620361
+  - rid: 8455035058607620379
+  - rid: 8455035058607620480
+  - rid: 8455035058607620502
+  - rid: 8455035058607620825
+  - rid: 8455035058607620937
+  m_VersionTimestamp: 639288027048392343
+  m_CommandBuffer:
+    m_Commands: []
+  m_RuntimeBlackboardAsset: {fileID: 1647689969320190158}
+  references:
+    version: 2
+    RefIds:
+    - rid: 8455035058607620290
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 1
+          m_Value1: 0
+        Name: Self
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620325
+      type: {class: 'TypedVariableModel`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 10274173872782565125
+          m_Value1: 14632145828776391377
+        Name: Beehive
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: {fileID: 0}
+    - rid: 8455035058607620361
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 6787119523355353181
+          m_Value1: 7569433577561809183
+        Name: beeNectar
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035058607620379
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 8654477992914128131
+          m_Value1: 4401849051014918286
+        Name: beePollen
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035058607620480
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 16213035026203648250
+          m_Value1: 11906225425605505666
+        Name: hiveNectar
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035058607620502
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 4337814984913212035
+          m_Value1: 4285928832938750784
+        Name: hivePollen
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035058607620825
+      type: {class: 'TypedVariableModel`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 4145302018458630113
+          m_Value1: 553365531426583762
+        Name: needResources
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 8455035058607620937
+      type: {class: 'TypedVariableModel`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 7202535139693848895
+          m_Value1: 14110960782042665910
+        Name: inventoryFull
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+--- !u!114 &7390184367564850268
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5b27bb6d9a2c8d540a10dff10acc543e, type: 3}
+  m_Name: BeeAI Debug Info
+  m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.BehaviorGraphDebugInfo
+  m_CodeBreakPointsList: []
