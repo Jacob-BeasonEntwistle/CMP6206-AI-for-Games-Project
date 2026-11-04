@@ -6,10 +6,10 @@ Garden of Agents is a demo scene set in a back garden with a multitude of creatu
 * Finite State Machine (FSM)
     * Pigeon - Passive
 
-## AI that will be implemented
 * Behaviour Tree
     * Bee - Neutral (passive until threatened)
 
+## AI that will be implemented
 * Perception Agent (Agents & Environments)
     * Dog - Neutral/aggressive
 

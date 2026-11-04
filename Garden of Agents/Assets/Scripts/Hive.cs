@@ -1,4 +1,3 @@
-using JetBrains.Annotations;
 using UnityEngine;
 
 public class Hive : MonoBehaviour
@@ -12,6 +11,8 @@ public class Hive : MonoBehaviour
     public bool nectarFull;
     public bool pollenFull;
 
+    private float resourceTimer;
+
     private void Update()
     {
         if (hiveNectarCount > maxNectar)
@@ -24,6 +25,16 @@ public class Hive : MonoBehaviour
             hivePollenCount = maxPollen;
             pollenFull = true;
         }
+
+        //// Deplete resources
+        //resourceTimer += Time.deltaTime;
+
+        //if (resourceTimer >= 1)
+        //{
+        //    hiveNectarCount -= 1;
+        //    hivePollenCount -= 2;
+        //    resourceTimer = 0;
+        //}
     }
 
     public int GetNectarCount()
@@ -33,5 +44,13 @@ public class Hive : MonoBehaviour
     public int GetPollenCount()
     {
         return hivePollenCount;
+    }
+
+    public void DepositResources(int nectar, int pollen)
+    {
+        Debug.Log($"{nectar} nectar and {pollen} pollen deposited");
+
+        hiveNectarCount += nectar;
+        hivePollenCount += pollen;
     }
 }
