@@ -21,6 +21,373 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
+    - rid: 234810846487511040
+      type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 10944769562587728727
+          m_Value1: 18444813125141789538
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: -2
+        m_Child:
+          rid: 234810846487511041
+        Repeat: 1
+        AllowMultipleRepeatsPerTick: 0
+    - rid: 234810846487511041
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 3769432706145299146
+          m_Value1: 8075283837728528235
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511040
+        m_Children:
+        - rid: 234810846487511042
+        - rid: 234810846487511043
+        m_RegisteredObservers: []
+    - rid: 234810846487511042
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 8275595292959086787
+          m_Value1: 17737292383553020908
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511041
+        m_Children:
+        - rid: 234810846487511044
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 234810846487511045
+        m_RequiresAllConditions: 0
+        True:
+          rid: 234810846487511044
+        False:
+          rid: -2
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 234810846487511043
+      type: {class: ConditionalGuardModifier, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 14926867087371537843
+          m_Value1: 4597250791043488281
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511041
+        m_Child:
+          rid: 234810846487511046
+        m_Conditions:
+        - rid: 234810846487511047
+        m_RequiresAllConditions: 0
+        m_ObserverType: 0
+    - rid: 234810846487511044
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 3364958771659699919
+          m_Value1: 1354700269268098622
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511042
+        m_Children:
+        - rid: 234810846487511048
+        - rid: 234810846487511049
+        - rid: 234810846487511050
+        m_RegisteredObservers: []
+    - rid: 234810846487511045
+      type: {class: IsAtHiveCondition, ns: , asm: Assembly-CSharp}
+      data:
+        Graph:
+          rid: 8455035058607620282
+        Bee:
+          rid: 6293314392995398299
+        Hive:
+          rid: 6293314392995398300
+        HiveInteractArea:
+          rid: 6293314392995398301
+        interactiveArea: 4
+    - rid: 234810846487511046
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 8016663781522028370
+          m_Value1: 16520974147753278544
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511043
+        m_Children:
+        - rid: 234810846487511051
+        - rid: 234810846487511052
+        - rid: 234810846487511053
+        m_RegisteredObservers: []
+    - rid: 234810846487511047
+      type: {class: HiveNeedResourcesCondition, ns: , asm: Assembly-CSharp}
+      data:
+        Graph:
+          rid: 8455035058607620282
+        NeedResources:
+          rid: 6293314392995398309
+    - rid: 234810846487511048
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 496927475716501191
+          m_Value1: 12696302562589407625
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511044
+        m_Children:
+        - rid: 234810846487511054
+        - rid: 234810846487511055
+        - rid: 234810846487511056
+        m_RegisteredObservers: []
+    - rid: 234810846487511049
+      type: {class: ConditionalGuardModifier, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 12851480913575653677
+          m_Value1: 13517150518771040321
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511044
+        m_Child:
+          rid: 234810846487511057
+        m_Conditions:
+        - rid: 234810846487511058
+        m_RequiresAllConditions: 0
+        m_ObserverType: 0
+    - rid: 234810846487511050
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 12896029170189313278
+          m_Value1: 7666749208224938445
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511044
+        m_Children:
+        - rid: 234810846487511059
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 234810846487511060
+        m_RequiresAllConditions: 0
+        True:
+          rid: 234810846487511059
+        False:
+          rid: -2
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 234810846487511051
+      type: {class: FindTargetFlowerAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 9544414679670755700
+          m_Value1: 2077129976423016808
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511046
+        Bee:
+          rid: 6293314392995398299
+        Flower:
+          rid: 6293314392995398302
+    - rid: 234810846487511052
+      type: {class: MoveToFlowerAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 15046015285719663839
+          m_Value1: 16201793969054223485
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511046
+        Bee:
+          rid: 6293314392995398299
+        Flower:
+          rid: 6293314392995398302
+        Speed:
+          rid: 6293314392995398311
+    - rid: 234810846487511053
+      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 14290581782104153687
+          m_Value1: 9717128423455354481
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511046
+        m_Children:
+        - rid: 234810846487511061
+        - rid: 234810846487511062
+        m_RegisteredObservers: []
+        m_Conditions:
+        - rid: 234810846487511063
+        m_RequiresAllConditions: 0
+        True:
+          rid: 234810846487511061
+        False:
+          rid: 234810846487511062
+        m_CurrentChild:
+          rid: -2
+        m_ObserverType: 0
+    - rid: 234810846487511054
+      type: {class: GetHiveResourcesAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 6935202148964697890
+          m_Value1: 6233555431513715513
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511048
+        HiveNectarCount:
+          rid: 6293314392995398305
+        HivePollenCount:
+          rid: 6293314392995398306
+        Beehive:
+          rid: 6293314392995398300
+    - rid: 234810846487511055
+      type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 5374750997278905196
+          m_Value1: 5498160023759841309
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511048
+        Variable:
+          rid: 6293314392995398305
+    - rid: 234810846487511056
+      type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 7032955797963376853
+          m_Value1: 16526178774395321916
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511048
+        Variable:
+          rid: 6293314392995398306
+    - rid: 234810846487511057
+      type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 10154917486010140457
+          m_Value1: 7135730501548716464
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511049
+        Variable:
+          rid: 6293314392995398309
+        Value:
+          rid: 234810846487511064
+    - rid: 234810846487511058
+      type: {class: IsResourcesLowCondition, ns: , asm: Assembly-CSharp}
+      data:
+        Graph:
+          rid: 8455035058607620282
+        HiveNectar:
+          rid: 6293314392995398305
+        HivePollen:
+          rid: 6293314392995398306
+        Threshold:
+          rid: 6293314392995398307
+    - rid: 234810846487511059
+      type: {class: DepositResourcesAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 741246126372835160
+          m_Value1: 9935999632694299925
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511050
+        BeeNectar:
+          rid: 6293314392995398303
+        BeePollen:
+          rid: 6293314392995398304
+        Hive:
+          rid: 6293314392995398300
+    - rid: 234810846487511060
+      type: {class: HasResourcesCondition, ns: , asm: Assembly-CSharp}
+      data:
+        Graph:
+          rid: 8455035058607620282
+        Nectar:
+          rid: 6293314392995398303
+        Pollen:
+          rid: 6293314392995398304
+    - rid: 234810846487511061
+      type: {class: ReturnToHiveAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 9125440525205758775
+          m_Value1: 8323821926019783595
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511053
+        Bee:
+          rid: 6293314392995398299
+        Hive:
+          rid: 6293314392995398300
+        Speed:
+          rid: 6293314392995398311
+    - rid: 234810846487511062
+      type: {class: CollectResourcesAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 17050114105301711166
+          m_Value1: 2320895187002976206
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 234810846487511053
+        Flower:
+          rid: 6293314392995398302
+        BeeNectar:
+          rid: 6293314392995398303
+        BeePollen:
+          rid: 6293314392995398304
+    - rid: 234810846487511063
+      type: {class: IsInventoryFullCondition, ns: , asm: Assembly-CSharp}
+      data:
+        Graph:
+          rid: 8455035058607620282
+        InventoryFull:
+          rid: 6293314392995398310
+        BeeNectar:
+          rid: 6293314392995398303
+        BeePollen:
+          rid: 6293314392995398304
+        MaxResourceCapacity:
+          rid: 6293314392995398308
+    - rid: 234810846487511064
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
     - rid: 6293314392995398299
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -125,373 +492,6 @@ MonoBehaviour:
           m_Value1: 6988550678864378158
         Name: moveSpeed
         m_Value: 1
-    - rid: 6293314392995398410
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 1
-    - rid: 6293314392995398435
-      type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 10944769562587728727
-          m_Value1: 18444813125141789538
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: -2
-        m_Child:
-          rid: 6293314392995398436
-        Repeat: 1
-        AllowMultipleRepeatsPerTick: 0
-    - rid: 6293314392995398436
-      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 3769432706145299146
-          m_Value1: 8075283837728528235
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398435
-        m_Children:
-        - rid: 6293314392995398437
-        - rid: 6293314392995398438
-        m_RegisteredObservers: []
-    - rid: 6293314392995398437
-      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 8275595292959086787
-          m_Value1: 17737292383553020908
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398436
-        m_Children:
-        - rid: 6293314392995398439
-        m_RegisteredObservers: []
-        m_Conditions:
-        - rid: 6293314392995398440
-        m_RequiresAllConditions: 0
-        True:
-          rid: 6293314392995398439
-        False:
-          rid: -2
-        m_CurrentChild:
-          rid: -2
-        m_ObserverType: 0
-    - rid: 6293314392995398438
-      type: {class: ConditionalGuardModifier, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 14926867087371537843
-          m_Value1: 4597250791043488281
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398436
-        m_Child:
-          rid: 6293314392995398441
-        m_Conditions:
-        - rid: 6293314392995398442
-        m_RequiresAllConditions: 0
-        m_ObserverType: 0
-    - rid: 6293314392995398439
-      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 3364958771659699919
-          m_Value1: 1354700269268098622
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398437
-        m_Children:
-        - rid: 6293314392995398443
-        - rid: 6293314392995398444
-        - rid: 6293314392995398445
-        m_RegisteredObservers: []
-    - rid: 6293314392995398440
-      type: {class: IsAtHiveCondition, ns: , asm: Assembly-CSharp}
-      data:
-        Graph:
-          rid: 8455035058607620282
-        Bee:
-          rid: 6293314392995398299
-        Hive:
-          rid: 6293314392995398300
-        HiveInteractArea:
-          rid: 6293314392995398301
-        interactiveArea: 4
-    - rid: 6293314392995398441
-      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 8016663781522028370
-          m_Value1: 16520974147753278544
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398438
-        m_Children:
-        - rid: 6293314392995398446
-        - rid: 6293314392995398447
-        - rid: 6293314392995398448
-        m_RegisteredObservers: []
-    - rid: 6293314392995398442
-      type: {class: HiveNeedResourcesCondition, ns: , asm: Assembly-CSharp}
-      data:
-        Graph:
-          rid: 8455035058607620282
-        NeedResources:
-          rid: 6293314392995398309
-    - rid: 6293314392995398443
-      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 496927475716501191
-          m_Value1: 12696302562589407625
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398439
-        m_Children:
-        - rid: 6293314392995398449
-        - rid: 6293314392995398450
-        - rid: 6293314392995398451
-        m_RegisteredObservers: []
-    - rid: 6293314392995398444
-      type: {class: ConditionalGuardModifier, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 12851480913575653677
-          m_Value1: 13517150518771040321
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398439
-        m_Child:
-          rid: 6293314392995398452
-        m_Conditions:
-        - rid: 6293314392995398453
-        m_RequiresAllConditions: 0
-        m_ObserverType: 0
-    - rid: 6293314392995398445
-      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 12896029170189313278
-          m_Value1: 7666749208224938445
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398439
-        m_Children:
-        - rid: 6293314392995398454
-        m_RegisteredObservers: []
-        m_Conditions:
-        - rid: 6293314392995398455
-        m_RequiresAllConditions: 0
-        True:
-          rid: 6293314392995398454
-        False:
-          rid: -2
-        m_CurrentChild:
-          rid: -2
-        m_ObserverType: 0
-    - rid: 6293314392995398446
-      type: {class: FindTargetFlowerAction, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 9544414679670755700
-          m_Value1: 2077129976423016808
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398441
-        Bee:
-          rid: 6293314392995398299
-        Flower:
-          rid: 6293314392995398302
-    - rid: 6293314392995398447
-      type: {class: MoveToFlowerAction, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 15046015285719663839
-          m_Value1: 16201793969054223485
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398441
-        Bee:
-          rid: 6293314392995398299
-        Flower:
-          rid: 6293314392995398302
-        Speed:
-          rid: 6293314392995398311
-    - rid: 6293314392995398448
-      type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 14290581782104153687
-          m_Value1: 9717128423455354481
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398441
-        m_Children:
-        - rid: 6293314392995398456
-        - rid: 6293314392995398457
-        m_RegisteredObservers: []
-        m_Conditions:
-        - rid: 6293314392995398458
-        m_RequiresAllConditions: 0
-        True:
-          rid: 6293314392995398456
-        False:
-          rid: 6293314392995398457
-        m_CurrentChild:
-          rid: -2
-        m_ObserverType: 0
-    - rid: 6293314392995398449
-      type: {class: GetHiveResourcesAction, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 6935202148964697890
-          m_Value1: 6233555431513715513
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398443
-        HiveNectarCount:
-          rid: 6293314392995398305
-        HivePollenCount:
-          rid: 6293314392995398306
-        Beehive:
-          rid: 6293314392995398300
-    - rid: 6293314392995398450
-      type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 5374750997278905196
-          m_Value1: 5498160023759841309
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398443
-        Variable:
-          rid: 6293314392995398305
-    - rid: 6293314392995398451
-      type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 7032955797963376853
-          m_Value1: 16526178774395321916
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398443
-        Variable:
-          rid: 6293314392995398306
-    - rid: 6293314392995398452
-      type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        ID:
-          m_Value0: 10154917486010140457
-          m_Value1: 7135730501548716464
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398444
-        Variable:
-          rid: 6293314392995398309
-        Value:
-          rid: 6293314392995398410
-    - rid: 6293314392995398453
-      type: {class: IsResourcesLowCondition, ns: , asm: Assembly-CSharp}
-      data:
-        Graph:
-          rid: 8455035058607620282
-        HiveNectar:
-          rid: 6293314392995398305
-        HivePollen:
-          rid: 6293314392995398306
-        Threshold:
-          rid: 6293314392995398307
-    - rid: 6293314392995398454
-      type: {class: DepositResourcesAction, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 741246126372835160
-          m_Value1: 9935999632694299925
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398445
-        BeeNectar:
-          rid: 6293314392995398303
-        BeePollen:
-          rid: 6293314392995398304
-        Hive:
-          rid: 6293314392995398300
-    - rid: 6293314392995398455
-      type: {class: HasResourcesCondition, ns: , asm: Assembly-CSharp}
-      data:
-        Graph:
-          rid: 8455035058607620282
-        Nectar:
-          rid: 6293314392995398303
-        Pollen:
-          rid: 6293314392995398304
-    - rid: 6293314392995398456
-      type: {class: ReturnToHiveAction, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 9125440525205758775
-          m_Value1: 8323821926019783595
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398448
-        Bee:
-          rid: 6293314392995398299
-        Hive:
-          rid: 6293314392995398300
-        Speed:
-          rid: 6293314392995398311
-    - rid: 6293314392995398457
-      type: {class: CollectResourcesAction, ns: , asm: Assembly-CSharp}
-      data:
-        ID:
-          m_Value0: 17050114105301711166
-          m_Value1: 2320895187002976206
-        Graph:
-          rid: 8455035058607620282
-        m_Parent:
-          rid: 6293314392995398448
-        Flower:
-          rid: 6293314392995398302
-        BeeNectar:
-          rid: 6293314392995398303
-        BeePollen:
-          rid: 6293314392995398304
-    - rid: 6293314392995398458
-      type: {class: IsInventoryFullCondition, ns: , asm: Assembly-CSharp}
-      data:
-        Graph:
-          rid: 8455035058607620282
-        InventoryFull:
-          rid: 6293314392995398310
-        BeeNectar:
-          rid: 6293314392995398303
-        BeePollen:
-          rid: 6293314392995398304
-        MaxResourceCapacity:
-          rid: 6293314392995398308
     - rid: 8455035058607620282
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -503,8 +503,8 @@ MonoBehaviour:
           rid: 8455035058607620283
         BlackboardGroupReferences: []
         Root:
-          rid: 6293314392995398435
-        m_VersionTimestamp: 639294086442565545
+          rid: 234810846487511040
+        m_VersionTimestamp: 639299276995240564
     - rid: 8455035058607620283
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -570,7 +570,7 @@ MonoBehaviour:
   - rid: 6293314392094933230
   - rid: 6293314392094933231
   - rid: 6293314392094933232
-  m_VersionTimestamp: 639294086442565545
+  m_VersionTimestamp: 639299276995240564
   m_SerializedVersion: 3
   m_DebugInfo: {fileID: 7390184367564850268}
   m_RuntimeGraph: {fileID: -7627645078566634896}
@@ -1013,7 +1013,7 @@ MonoBehaviour:
     - rid: 6293314389425258858
       type: {class: ConditionalGuardNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: 355.66748, y: 97.5237}
+        Position: {x: 343.64447, y: 113.153595}
         ID:
           m_Value0: 14926867087371537843
           m_Value1: 4597250791043488281
@@ -2579,8 +2579,8 @@ MonoBehaviour:
         m_NodeModel:
           rid: 8455035058607620696
         m_Connections:
-        - rid: 6293314389425258859
         - rid: 6293314391933977008
+        - rid: 6293314389425258859
     - rid: 8455035058607620971
       type: {class: ConditionalGuardNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
