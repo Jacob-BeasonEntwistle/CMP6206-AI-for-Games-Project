@@ -99,6 +99,7 @@ Individual bees could operate using local rules (memory, communication, resource
 2. Instantiating Prefabs - https://learn.unity.com/tutorial/instantiate
 3. Looking towards a point - https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Quaternion.LookRotation.html
 4. Bee Research - https://www.buzzedaboutbees.com/identifying-bees-behavior-of-bees
+5. Selecting a point in a sphere - https://docs.unity.com/en-us/engine/6000.6/script-reference/unityengine/random/insideunitsphere
 
 ## TODO: Add the following details and update regularly
 
