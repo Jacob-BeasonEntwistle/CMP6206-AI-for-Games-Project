@@ -23,6 +23,9 @@
 # They also could contain extremely sensitive data
 /[Mm]emoryCaptures/
 
+# Unity profiler captures can get excessive in size and are generated output
+/[Pp]rofilerCaptures/
+
 # Recordings can get excessive in size
 /[Rr]ecordings/
 

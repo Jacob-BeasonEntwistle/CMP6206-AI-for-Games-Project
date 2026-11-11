@@ -2,28 +2,60 @@
 
 Garden of Agents is a demo scene set in a back garden with a multitude of creatures and critters that traverse the ground and patrol the air. 
 
-## Implemented AI
+# Features
+
+### Implemented AI
 * Finite State Machine (FSM)
     * Pigeon - Passive
 
-## AI that will be implemented
 * Behaviour Tree
     * Bee - Neutral (passive until threatened)
 
+### AI that will be implemented
 * Perception Agent (Agents & Environments)
     * Dog - Neutral/aggressive
 
 * Pathfinding AI
     * Snail - Passive
 
-## Target Game Engine
+### Target Game Engine
 * Unity
 
-## Methodology & Planning
+# Methodology & Planning
 
 I'm using Trello to track my progress throughout the project, creating a list of tasks that help with prioritising the development of key features and AI as well as keep track of what has been completed.
 
 Trello board: [Garden of Agents](https://trello.com/b/SeBHeLrO/garden-of-agents)
+
+# Optimisation
+
+## Behaviour Tree (the bees)
+
+### Resource threshold...
+
+The bees only go to look for resources if the hive requires them. A current resource threshold of 40 units is used, if both resources (nectar & pollen) are above this threshold, the bees stop gathering and remain near the hive. **This prevents unnecessary resource collection and reduces agent activity when resources are abundant, making the simulation more efficient.**
+
+### Scalibility...
+
+**Prediction**: Increasing the number of bees from 1 to 10 should result in a tenfold increase in AI processing cost because each bee runs the Behaviour Tree independently every update cycle
+
+**Results**:
+| No. of Bees | Time (ms) |
+| :---------: | :-------: |
+| 1           | 0.02ms    |
+| 10          | 0.08ms*   |
+
+*Average observed during normal operation
+
+**Evaluation**:
+Unity Profiler showed that increasing the number of bees from 1 to 10 increased Behaviour Tree processing time from 0.02ms to approximately 0.08ms. This is a 4x increase, rather than the predicted 10x increase.
+
+Although the measured increase was lower than expected during normal operation, performance spikes of up to 0.31ms were observed when multiple bees had collected resources and were waiting to deposit them at the hive. This suggests that additional processing may occur when bees repeatedly check resource-related conditions while waiting for the hive's resource levels to fall below the threshold.
+
+**How to further optimise**:
+* Reduce Behaviour Tree Update frequency
+* Cache references to flowers to minimise repeated lookup actions (create a list of visited flowers)
+* Add dedicated waiting branch for bees holding resources, reducing repeated condition evaluation when idle
 
 # Research
 
@@ -67,6 +99,7 @@ Individual bees could operate using local rules (memory, communication, resource
 2. Instantiating Prefabs - https://learn.unity.com/tutorial/instantiate
 3. Looking towards a point - https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Quaternion.LookRotation.html
 4. Bee Research - https://www.buzzedaboutbees.com/identifying-bees-behavior-of-bees
+5. Selecting a point in a sphere - https://docs.unity.com/en-us/engine/6000.6/script-reference/unityengine/random/insideunitsphere
 
 ## TODO: Add the following details and update regularly
 
