@@ -1,19 +1,22 @@
 using System.Threading;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public enum FlowerType { Lavender, Sunflowers, Poppies };
 
 public class FlowerBed : MonoBehaviour
 {
-    public int flowerNectarCount;
-    public int flowerPollenCount;
-
+    [Header("FlowerBed Resources")]
     public int currentNectarCount;
     public int currentPollenCount;
 
+    public float resourceTimer;
+
+    [Header("Flower Stats")]
     public FlowerType type;
 
-    public float resourceTimer;
+    public int flowerNectarCount;
+    public int flowerPollenCount;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,19 +25,19 @@ public class FlowerBed : MonoBehaviour
         if (type == FlowerType.Lavender)
         {
             flowerNectarCount = 100;
-            flowerPollenCount = 100;
+            flowerPollenCount = 80;
         }
 
         if (type == FlowerType.Sunflowers)
         {
             flowerNectarCount = 60;
-            flowerPollenCount = 60;
+            flowerPollenCount = 40;
         }
 
         if (type == FlowerType.Poppies)
         {
             flowerNectarCount = 30;
-            flowerPollenCount = 30;
+            flowerPollenCount = 10;
         }
 
         // Start the game with flower resources at half capacity
@@ -74,13 +77,30 @@ public class FlowerBed : MonoBehaviour
         }
     }
 
-    public void CollectNectar()
+    public int GetNectar()
     {
-        currentNectarCount -= 20;
+        return currentNectarCount;
     }
-
-    public void CollectPollen()
+    public int GetPollen()
     {
-        currentPollenCount -= 20;
+        return currentPollenCount;
+    }
+    public void TakeNectar(int nectar)
+    {
+        currentNectarCount -= nectar;
+
+        if (currentNectarCount < 0)
+        {
+            currentNectarCount = 0;
+        }
+    }
+    public void TakePollen(int pollen)
+    {
+        currentPollenCount -= pollen;
+
+        if (currentPollenCount < 0)
+        {
+            currentPollenCount = 0;
+        }
     }
 }

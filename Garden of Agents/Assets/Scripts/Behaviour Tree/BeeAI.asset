@@ -21,7 +21,7 @@ MonoBehaviour:
     RefIds:
     - rid: -2
       type: {class: , ns: , asm: }
-    - rid: 7011450672179577312
+    - rid: 7011450672179577855
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -29,7 +29,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: Self
         m_Value: {fileID: 0}
-    - rid: 7011450672179577313
+    - rid: 7011450674799181824
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -37,7 +37,7 @@ MonoBehaviour:
           m_Value1: 6988550678864378158
         Name: moveSpeed
         m_Value: 5
-    - rid: 7011450672179577314
+    - rid: 7011450674799181825
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -45,7 +45,7 @@ MonoBehaviour:
           m_Value1: 7569433577561809183
         Name: beeNectar
         m_Value: 0
-    - rid: 7011450672179577315
+    - rid: 7011450674799181826
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -53,7 +53,7 @@ MonoBehaviour:
           m_Value1: 4401849051014918286
         Name: beePollen
         m_Value: 0
-    - rid: 7011450672179577316
+    - rid: 7011450674799181827
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -61,7 +61,7 @@ MonoBehaviour:
           m_Value1: 16516670074696610778
         Name: maxResourceCapacity
         m_Value: 50
-    - rid: 7011450672179577317
+    - rid: 7011450674799181828
       type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -69,7 +69,7 @@ MonoBehaviour:
           m_Value1: 14110960782042665910
         Name: inventoryFull
         m_Value: 0
-    - rid: 7011450672179577318
+    - rid: 7011450674799181829
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -77,7 +77,7 @@ MonoBehaviour:
           m_Value1: 14632145828776391377
         Name: Beehive
         m_Value: {fileID: 0}
-    - rid: 7011450672179577319
+    - rid: 7011450674799181830
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -85,7 +85,7 @@ MonoBehaviour:
           m_Value1: 11906225425605505666
         Name: hiveNectar
         m_Value: 0
-    - rid: 7011450672179577320
+    - rid: 7011450674799181831
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -93,7 +93,7 @@ MonoBehaviour:
           m_Value1: 4285928832938750784
         Name: hivePollen
         m_Value: 0
-    - rid: 7011450672179577321
+    - rid: 7011450674799181832
       type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -101,7 +101,7 @@ MonoBehaviour:
           m_Value1: 4903925781396394957
         Name: resourceLowThreshold
         m_Value: 40
-    - rid: 7011450672179577322
+    - rid: 7011450674799181833
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -109,7 +109,7 @@ MonoBehaviour:
           m_Value1: 17440736808299701544
         Name: hiveInteractArea
         m_Value: 2
-    - rid: 7011450672179577323
+    - rid: 7011450674799181834
       type: {class: 'BlackboardVariable`1[[UnityEngine.GameObject, UnityEngine.CoreModule]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -117,7 +117,7 @@ MonoBehaviour:
           m_Value1: 2489936585323900161
         Name: TargetFlower
         m_Value: {fileID: 0}
-    - rid: 7011450672179577324
+    - rid: 7011450674799181835
       type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -125,7 +125,7 @@ MonoBehaviour:
           m_Value1: 553365531426583762
         Name: needResources
         m_Value: 1
-    - rid: 7011450672179577709
+    - rid: 7011450674799182071
       type: {class: 'BlackboardVariable`1[[System.String, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -133,23 +133,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: Beehive
-    - rid: 7011450672179577733
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 1
-    - rid: 7011450672179577734
-      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
-      data:
-        GUID:
-          m_Value0: 0
-          m_Value1: 0
-        Name: 
-        m_Value: 0
-    - rid: 7011450672179577738
+    - rid: 7011450674799182097
       type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -157,7 +141,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 3
-    - rid: 7011450672179577745
+    - rid: 7011450674799182098
       type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -165,7 +149,7 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 1
-    - rid: 7011450672179577746
+    - rid: 7011450674799182099
       type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         GUID:
@@ -173,7 +157,31 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 0
-    - rid: 7011450672179577747
+    - rid: 7011450674799182103
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 3
+    - rid: 7011450674799182110
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 1
+    - rid: 7011450674799182111
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 7011450674799182112
       type: {class: ParallelAllComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -184,10 +192,10 @@ MonoBehaviour:
         m_Parent:
           rid: -2
         m_Children:
-        - rid: 7011450672179577748
-        - rid: 7011450672179577749
+        - rid: 7011450674799182113
+        - rid: 7011450674799182114
         m_RegisteredObservers: []
-    - rid: 7011450672179577748
+    - rid: 7011450674799182113
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -196,12 +204,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577747
+          rid: 7011450674799182112
         m_Child:
-          rid: 7011450672179577750
+          rid: 7011450674799182115
         Repeat: 1
         AllowMultipleRepeatsPerTick: 0
-    - rid: 7011450672179577749
+    - rid: 7011450674799182114
       type: {class: Start, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -210,12 +218,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577747
+          rid: 7011450674799182112
         m_Child:
-          rid: 7011450672179577751
+          rid: 7011450674799182116
         Repeat: 0
         AllowMultipleRepeatsPerTick: 0
-    - rid: 7011450672179577750
+    - rid: 7011450674799182115
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -224,22 +232,22 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577748
+          rid: 7011450674799182113
         m_Children:
-        - rid: 7011450672179577752
-        - rid: 7011450672179577753
+        - rid: 7011450674799182117
+        - rid: 7011450674799182118
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 7011450672179577754
+        - rid: 7011450674799182119
         m_RequiresAllConditions: 0
         True:
-          rid: 7011450672179577752
+          rid: 7011450674799182117
         False:
-          rid: 7011450672179577753
+          rid: 7011450674799182118
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 7011450672179577751
+    - rid: 7011450674799182116
       type: {class: FindObjectWithTagAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -248,12 +256,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577749
+          rid: 7011450674799182114
         Object:
-          rid: 7011450672179577318
+          rid: 7011450674799181829
         Tag:
-          rid: 7011450672179577709
-    - rid: 7011450672179577752
+          rid: 7011450674799182071
+    - rid: 7011450674799182117
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -262,22 +270,22 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577750
+          rid: 7011450674799182115
         m_Children:
-        - rid: 7011450672179577755
-        - rid: 7011450672179577756
+        - rid: 7011450674799182120
+        - rid: 7011450674799182121
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 7011450672179577757
+        - rid: 7011450674799182122
         m_RequiresAllConditions: 0
         True:
-          rid: 7011450672179577755
+          rid: 7011450674799182120
         False:
-          rid: 7011450672179577756
+          rid: 7011450674799182121
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 7011450672179577753
+    - rid: 7011450674799182118
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -286,35 +294,35 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577750
+          rid: 7011450674799182115
         m_Children:
-        - rid: 7011450672179577758
-        - rid: 7011450672179577759
+        - rid: 7011450674799182123
+        - rid: 7011450674799182124
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 7011450672179577760
+        - rid: 7011450674799182125
         m_RequiresAllConditions: 0
         True:
-          rid: 7011450672179577758
+          rid: 7011450674799182123
         False:
-          rid: 7011450672179577759
+          rid: 7011450674799182124
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 7011450672179577754
+    - rid: 7011450674799182119
       type: {class: IsInventoryFullCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 8455035058607620282
         InventoryFull:
-          rid: 7011450672179577317
+          rid: 7011450674799181828
         BeeNectar:
-          rid: 7011450672179577314
+          rid: 7011450674799181825
         BeePollen:
-          rid: 7011450672179577315
+          rid: 7011450674799181826
         MaxResourceCapacity:
-          rid: 7011450672179577316
-    - rid: 7011450672179577755
+          rid: 7011450674799181827
+    - rid: 7011450674799182120
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -323,13 +331,13 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577752
+          rid: 7011450674799182117
         m_Children:
-        - rid: 7011450672179577761
-        - rid: 7011450672179577762
-        - rid: 7011450672179577763
+        - rid: 7011450674799182126
+        - rid: 7011450674799182127
+        - rid: 7011450674799182128
         m_RegisteredObservers: []
-    - rid: 7011450672179577756
+    - rid: 7011450674799182121
       type: {class: ReturnToHiveAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -338,26 +346,26 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577752
+          rid: 7011450674799182117
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Hive:
-          rid: 7011450672179577318
+          rid: 7011450674799181829
         Speed:
-          rid: 7011450672179577313
-    - rid: 7011450672179577757
+          rid: 7011450674799181824
+    - rid: 7011450674799182122
       type: {class: IsAtHiveCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 8455035058607620282
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Hive:
-          rid: 7011450672179577318
+          rid: 7011450674799181829
         HiveInteractArea:
-          rid: 7011450672179577322
+          rid: 7011450674799181833
         interactiveArea: 4
-    - rid: 7011450672179577758
+    - rid: 7011450674799182123
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -366,13 +374,13 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577753
+          rid: 7011450674799182118
         m_Children:
-        - rid: 7011450672179577764
-        - rid: 7011450672179577765
-        - rid: 7011450672179577766
+        - rid: 7011450674799182129
+        - rid: 7011450674799182130
+        - rid: 7011450674799182131
         m_RegisteredObservers: []
-    - rid: 7011450672179577759
+    - rid: 7011450674799182124
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -381,30 +389,30 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577753
+          rid: 7011450674799182118
         m_Children:
-        - rid: 7011450672179577767
-        - rid: 7011450672179577768
+        - rid: 7011450674799182132
+        - rid: 7011450674799182133
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 7011450672179577769
+        - rid: 7011450674799182134
         m_RequiresAllConditions: 0
         True:
-          rid: 7011450672179577767
+          rid: 7011450674799182132
         False:
-          rid: 7011450672179577768
+          rid: 7011450674799182133
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 7011450672179577760
+    - rid: 7011450674799182125
       type: {class: HiveNeedResourcesCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 8455035058607620282
         NeedResources:
-          rid: 7011450672179577324
-    - rid: 7011450672179577761
-      type: {class: DepositResourcesAction, ns: , asm: Assembly-CSharp}
+          rid: 7011450674799181835
+    - rid: 7011450674799182126
+      type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
           m_Value0: 6787129165944697820
@@ -412,14 +420,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577755
-        BeeNectar:
-          rid: 7011450672179577314
-        BeePollen:
-          rid: 7011450672179577315
-        Hive:
-          rid: 7011450672179577318
-    - rid: 7011450672179577762
+          rid: 7011450674799182120
+        m_Children:
+        - rid: 7011450674799182135
+        - rid: 7011450674799182136
+        m_RegisteredObservers: []
+    - rid: 7011450674799182127
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -428,13 +434,13 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577755
+          rid: 7011450674799182120
         m_Children:
-        - rid: 7011450672179577770
-        - rid: 7011450672179577771
-        - rid: 7011450672179577772
+        - rid: 7011450674799182137
+        - rid: 7011450674799182138
+        - rid: 7011450674799182139
         m_RegisteredObservers: []
-    - rid: 7011450672179577763
+    - rid: 7011450674799182128
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -443,22 +449,22 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577755
+          rid: 7011450674799182120
         m_Children:
-        - rid: 7011450672179577773
-        - rid: 7011450672179577774
+        - rid: 7011450674799182140
+        - rid: 7011450674799182141
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 7011450672179577775
+        - rid: 7011450674799182142
         m_RequiresAllConditions: 0
         True:
-          rid: 7011450672179577773
+          rid: 7011450674799182140
         False:
-          rid: 7011450672179577774
+          rid: 7011450674799182141
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 7011450672179577764
+    - rid: 7011450674799182129
       type: {class: FindTargetFlowerAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -467,12 +473,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577758
+          rid: 7011450674799182123
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Flower:
-          rid: 7011450672179577323
-    - rid: 7011450672179577765
+          rid: 7011450674799181834
+    - rid: 7011450674799182130
       type: {class: MoveToFlowerAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -481,14 +487,14 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577758
+          rid: 7011450674799182123
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Flower:
-          rid: 7011450672179577323
+          rid: 7011450674799181834
         Speed:
-          rid: 7011450672179577313
-    - rid: 7011450672179577766
+          rid: 7011450674799181824
+    - rid: 7011450674799182131
       type: {class: CollectResourcesAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -497,14 +503,18 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577758
+          rid: 7011450674799182123
         Flower:
-          rid: 7011450672179577323
+          rid: 7011450674799181834
         BeeNectar:
-          rid: 7011450672179577314
+          rid: 7011450674799181825
         BeePollen:
-          rid: 7011450672179577315
-    - rid: 7011450672179577767
+          rid: 7011450674799181826
+        InventoryFull:
+          rid: 7011450674799181828
+        MaxResourceCapacity:
+          rid: 7011450674799181827
+    - rid: 7011450674799182132
       type: {class: ParallelAllComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -513,12 +523,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577759
+          rid: 7011450674799182124
         m_Children:
-        - rid: 7011450672179577776
-        - rid: 7011450672179577777
+        - rid: 7011450674799182143
+        - rid: 7011450674799182144
         m_RegisteredObservers: []
-    - rid: 7011450672179577768
+    - rid: 7011450674799182133
       type: {class: ReturnToHiveAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -527,26 +537,54 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577759
+          rid: 7011450674799182124
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Hive:
-          rid: 7011450672179577318
+          rid: 7011450674799181829
         Speed:
-          rid: 7011450672179577313
-    - rid: 7011450672179577769
+          rid: 7011450674799181824
+    - rid: 7011450674799182134
       type: {class: IsAtHiveCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 8455035058607620282
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Hive:
-          rid: 7011450672179577318
+          rid: 7011450674799181829
         HiveInteractArea:
-          rid: 7011450672179577322
+          rid: 7011450674799181833
         interactiveArea: 4
-    - rid: 7011450672179577770
+    - rid: 7011450674799182135
+      type: {class: DepositResourcesAction, ns: , asm: Assembly-CSharp}
+      data:
+        ID:
+          m_Value0: 6787129165944697820
+          m_Value1: 8108266928125657033
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 7011450674799182126
+        BeeNectar:
+          rid: 7011450674799181825
+        BeePollen:
+          rid: 7011450674799181826
+        Hive:
+          rid: 7011450674799181829
+    - rid: 7011450674799182136
+      type: {class: WaitAction, ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        ID:
+          m_Value0: 17433231551434939605
+          m_Value1: 6168767294057118488
+        Graph:
+          rid: 8455035058607620282
+        m_Parent:
+          rid: 7011450674799182126
+        SecondsToWait:
+          rid: 7011450674799182097
+    - rid: 7011450674799182137
       type: {class: GetHiveResourcesAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -555,14 +593,14 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577762
+          rid: 7011450674799182127
         HiveNectarCount:
-          rid: 7011450672179577319
+          rid: 7011450674799181830
         HivePollenCount:
-          rid: 7011450672179577320
+          rid: 7011450674799181831
         Beehive:
-          rid: 7011450672179577318
-    - rid: 7011450672179577771
+          rid: 7011450674799181829
+    - rid: 7011450674799182138
       type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -571,10 +609,10 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577762
+          rid: 7011450674799182127
         Variable:
-          rid: 7011450672179577319
-    - rid: 7011450672179577772
+          rid: 7011450674799181830
+    - rid: 7011450674799182139
       type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -583,10 +621,10 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577762
+          rid: 7011450674799182127
         Variable:
-          rid: 7011450672179577320
-    - rid: 7011450672179577773
+          rid: 7011450674799181831
+    - rid: 7011450674799182140
       type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -595,12 +633,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577763
+          rid: 7011450674799182128
         Variable:
-          rid: 7011450672179577324
+          rid: 7011450674799181835
         Value:
-          rid: 7011450672179577733
-    - rid: 7011450672179577774
+          rid: 7011450674799182098
+    - rid: 7011450674799182141
       type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -609,23 +647,23 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577763
+          rid: 7011450674799182128
         Variable:
-          rid: 7011450672179577324
+          rid: 7011450674799181835
         Value:
-          rid: 7011450672179577734
-    - rid: 7011450672179577775
+          rid: 7011450674799182099
+    - rid: 7011450674799182142
       type: {class: IsResourcesLowCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 8455035058607620282
         HiveNectar:
-          rid: 7011450672179577319
+          rid: 7011450674799181830
         HivePollen:
-          rid: 7011450672179577320
+          rid: 7011450674799181831
         Threshold:
-          rid: 7011450672179577321
-    - rid: 7011450672179577776
+          rid: 7011450674799181832
+    - rid: 7011450674799182143
       type: {class: IdleAroundHiveAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -634,16 +672,16 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577767
+          rid: 7011450674799182132
         Bee:
-          rid: 7011450672179577312
+          rid: 7011450672179577855
         Hive:
-          rid: 7011450672179577318
+          rid: 7011450674799181829
         HiveInteractArea:
-          rid: 7011450672179577322
+          rid: 7011450674799181833
         Speed:
-          rid: 7011450672179577313
-    - rid: 7011450672179577777
+          rid: 7011450674799181824
+    - rid: 7011450674799182144
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -652,13 +690,13 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577767
+          rid: 7011450674799182132
         m_Children:
-        - rid: 7011450672179577778
-        - rid: 7011450672179577779
-        - rid: 7011450672179577780
+        - rid: 7011450674799182145
+        - rid: 7011450674799182146
+        - rid: 7011450674799182147
         m_RegisteredObservers: []
-    - rid: 7011450672179577778
+    - rid: 7011450674799182145
       type: {class: WaitAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -667,10 +705,10 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577777
+          rid: 7011450674799182144
         SecondsToWait:
-          rid: 7011450672179577738
-    - rid: 7011450672179577779
+          rid: 7011450674799182103
+    - rid: 7011450674799182146
       type: {class: SequenceComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -679,13 +717,13 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577777
+          rid: 7011450674799182144
         m_Children:
-        - rid: 7011450672179577781
-        - rid: 7011450672179577782
-        - rid: 7011450672179577783
+        - rid: 7011450674799182148
+        - rid: 7011450674799182149
+        - rid: 7011450674799182150
         m_RegisteredObservers: []
-    - rid: 7011450672179577780
+    - rid: 7011450674799182147
       type: {class: BranchingConditionComposite, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -694,22 +732,22 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577777
+          rid: 7011450674799182144
         m_Children:
-        - rid: 7011450672179577784
-        - rid: 7011450672179577785
+        - rid: 7011450674799182151
+        - rid: 7011450674799182152
         m_RegisteredObservers: []
         m_Conditions:
-        - rid: 7011450672179577786
+        - rid: 7011450674799182153
         m_RequiresAllConditions: 0
         True:
-          rid: 7011450672179577784
+          rid: 7011450674799182151
         False:
-          rid: 7011450672179577785
+          rid: 7011450674799182152
         m_CurrentChild:
           rid: -2
         m_ObserverType: 0
-    - rid: 7011450672179577781
+    - rid: 7011450674799182148
       type: {class: GetHiveResourcesAction, ns: , asm: Assembly-CSharp}
       data:
         ID:
@@ -718,14 +756,14 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577779
+          rid: 7011450674799182146
         HiveNectarCount:
-          rid: 7011450672179577319
+          rid: 7011450674799181830
         HivePollenCount:
-          rid: 7011450672179577320
+          rid: 7011450674799181831
         Beehive:
-          rid: 7011450672179577318
-    - rid: 7011450672179577782
+          rid: 7011450674799181829
+    - rid: 7011450674799182149
       type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -734,10 +772,10 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577779
+          rid: 7011450674799182146
         Variable:
-          rid: 7011450672179577319
-    - rid: 7011450672179577783
+          rid: 7011450674799181830
+    - rid: 7011450674799182150
       type: {class: LogVariableToConsoleAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -746,10 +784,10 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577779
+          rid: 7011450674799182146
         Variable:
-          rid: 7011450672179577320
-    - rid: 7011450672179577784
+          rid: 7011450674799181831
+    - rid: 7011450674799182151
       type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -758,12 +796,12 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577780
+          rid: 7011450674799182147
         Variable:
-          rid: 7011450672179577324
+          rid: 7011450674799181835
         Value:
-          rid: 7011450672179577745
-    - rid: 7011450672179577785
+          rid: 7011450674799182110
+    - rid: 7011450674799182152
       type: {class: SetVariableValueAction, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         ID:
@@ -772,22 +810,22 @@ MonoBehaviour:
         Graph:
           rid: 8455035058607620282
         m_Parent:
-          rid: 7011450672179577780
+          rid: 7011450674799182147
         Variable:
-          rid: 7011450672179577324
+          rid: 7011450674799181835
         Value:
-          rid: 7011450672179577746
-    - rid: 7011450672179577786
+          rid: 7011450674799182111
+    - rid: 7011450674799182153
       type: {class: IsResourcesLowCondition, ns: , asm: Assembly-CSharp}
       data:
         Graph:
           rid: 8455035058607620282
         HiveNectar:
-          rid: 7011450672179577319
+          rid: 7011450674799181830
         HivePollen:
-          rid: 7011450672179577320
+          rid: 7011450674799181831
         Threshold:
-          rid: 7011450672179577321
+          rid: 7011450674799181832
     - rid: 8455035058607620282
       type: {class: BehaviorGraphModule, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -799,8 +837,8 @@ MonoBehaviour:
           rid: 8455035058607620283
         BlackboardGroupReferences: []
         Root:
-          rid: 7011450672179577747
-        m_VersionTimestamp: 639300061068543006
+          rid: 7011450674799182112
+        m_VersionTimestamp: 639300107942253977
     - rid: 8455035058607620283
       type: {class: BlackboardReference, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
@@ -811,19 +849,19 @@ MonoBehaviour:
       type: {class: Blackboard, ns: Unity.Behavior, asm: Unity.Behavior}
       data:
         m_Variables:
-        - rid: 7011450672179577312
-        - rid: 7011450672179577313
-        - rid: 7011450672179577314
-        - rid: 7011450672179577315
-        - rid: 7011450672179577316
-        - rid: 7011450672179577317
-        - rid: 7011450672179577318
-        - rid: 7011450672179577319
-        - rid: 7011450672179577320
-        - rid: 7011450672179577321
-        - rid: 7011450672179577322
-        - rid: 7011450672179577323
-        - rid: 7011450672179577324
+        - rid: 7011450672179577855
+        - rid: 7011450674799181824
+        - rid: 7011450674799181825
+        - rid: 7011450674799181826
+        - rid: 7011450674799181827
+        - rid: 7011450674799181828
+        - rid: 7011450674799181829
+        - rid: 7011450674799181830
+        - rid: 7011450674799181831
+        - rid: 7011450674799181832
+        - rid: 7011450674799181833
+        - rid: 7011450674799181834
+        - rid: 7011450674799181835
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -892,7 +930,8 @@ MonoBehaviour:
   - rid: 7011450672179577260
   - rid: 7011450672179577400
   - rid: 7011450672179577696
-  m_VersionTimestamp: 639300061068543006
+  - rid: 7011450674799181970
+  m_VersionTimestamp: 639300107942253977
   m_SerializedVersion: 3
   m_DebugInfo: {fileID: 7390184367564850268}
   m_RuntimeGraph: {fileID: -7627645078566634896}
@@ -1010,7 +1049,8 @@ MonoBehaviour:
     NamedChildren: []
     IsPlaceholder: 0
   - Name: CollectResources
-    Story: 'Collect resources from [Flower] and store in [beeNectar] and [beePollen]'
+    Story: Collect resources from [Flower] and store in [beeNectar] and [beePollen]
+      until [inventoryFull] [maxResourceCapacity] reached
     RuntimeTypeString: CollectResourcesAction, Assembly-CSharp, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
     RuntimeTypeID:
@@ -1028,6 +1068,16 @@ MonoBehaviour:
           PublicKeyToken=b77a5c561934e089
       Tooltip: 
     - Name: BeePollen
+      Type:
+        m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: InventoryFull
+      Type:
+        m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+          PublicKeyToken=b77a5c561934e089
+      Tooltip: 
+    - Name: MaxResourceCapacity
       Type:
         m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
           PublicKeyToken=b77a5c561934e089
@@ -1517,7 +1567,7 @@ MonoBehaviour:
     - rid: 6293314390623257402
       type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
-        Position: {x: 701.8362, y: 638.033}
+        Position: {x: 433.023, y: 704.1105}
         ID:
           m_Value0: 17050114105301711166
           m_Value1: 2320895187002976206
@@ -1535,6 +1585,8 @@ MonoBehaviour:
         - rid: 6293314390623257427
         - rid: 6293314390623257483
         - rid: 6293314390623257484
+        - rid: 7011450672179577787
+        - rid: 7011450672179577849
     - rid: 6293314390623257403
       type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -2237,6 +2289,121 @@ MonoBehaviour:
           m_Value1: 0
         Name: 
         m_Value: 3
+    - rid: 7011450672179577787
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: InventoryFull
+        Type:
+          m_SerializableType: System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 7011450672179577788
+        LinkedVariable:
+          rid: 7011450672179577789
+    - rid: 7011450672179577788
+      type: {class: 'BlackboardVariable`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 7011450672179577789
+      type: {class: 'TypedVariableModel`1[[System.Boolean, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 7202535139693848895
+          m_Value1: 14110960782042665910
+        Name: inventoryFull
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 0
+    - rid: 7011450672179577849
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: MaxResourceCapacity
+        Type:
+          m_SerializableType: System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 7011450672179577850
+        LinkedVariable:
+          rid: 7011450672179577851
+    - rid: 7011450672179577850
+      type: {class: 'BlackboardVariable`1[[System.Int32, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 0
+    - rid: 7011450672179577851
+      type: {class: 'TypedVariableModel`1[[System.Int32, mscorlib]]', ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        ID:
+          m_Value0: 17646148104211987397
+          m_Value1: 16516670074696610778
+        Name: maxResourceCapacity
+        IsExposed: 1
+        m_IsShared: 0
+        m_Value: 50
+    - rid: 7011450674799181970
+      type: {class: ActionNodeModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        Position: {x: -924.0104, y: 798.6201}
+        ID:
+          m_Value0: 17433231551434939605
+          m_Value1: 6168767294057118488
+        Parents: []
+        PortModels:
+        - rid: 7011450674799181971
+        - rid: 7011450674799181972
+        NodeType:
+          m_SerializableType: Unity.Behavior.WaitAction, Unity.Behavior, Version=0.0.0.0,
+            Culture=neutral, PublicKeyToken=null
+        NodeTypeID:
+          m_Value0: 7729581452106168333
+          m_Value1: 8820302366443624372
+        m_FieldValues:
+        - rid: 7011450674799181973
+    - rid: 7011450674799181971
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: InputPort
+        m_PortDataFlowType: 0
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 7011450674799181970
+        m_Connections:
+        - rid: 7319640480337101104
+    - rid: 7011450674799181972
+      type: {class: PortModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
+      data:
+        m_Name: OutputPort
+        m_PortDataFlowType: 1
+        m_IsFloating: 0
+        m_NodeModel:
+          rid: 7011450674799181970
+        m_Connections: []
+    - rid: 7011450674799181973
+      type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
+      data:
+        FieldName: SecondsToWait
+        Type:
+          m_SerializableType: System.Single, mscorlib, Version=4.0.0.0, Culture=neutral,
+            PublicKeyToken=b77a5c561934e089
+        LocalValue:
+          rid: 7011450674799181974
+        LinkedVariable:
+          rid: -2
+    - rid: 7011450674799181974
+      type: {class: 'BlackboardVariable`1[[System.Single, mscorlib]]', ns: Unity.Behavior, asm: Unity.Behavior}
+      data:
+        GUID:
+          m_Value0: 0
+          m_Value1: 0
+        Name: 
+        m_Value: 3
     - rid: 7319640480337100922
       type: {class: StickyNoteModel, ns: Unity.Behavior.GraphFramework, asm: Unity.Behavior.GraphFramework}
       data:
@@ -2522,7 +2689,8 @@ MonoBehaviour:
         m_IsFloating: 0
         m_NodeModel:
           rid: 7319640480337101092
-        m_Connections: []
+        m_Connections:
+        - rid: 7011450674799181971
     - rid: 7319640480337101105
       type: {class: BehaviorGraphNodeModel/FieldModel, ns: Unity.Behavior, asm: Unity.Behavior.Authoring}
       data:
@@ -4789,7 +4957,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5c02bb70996b49eba31d0c206e28da24, type: 3}
   m_Name: BeeAI Blackboard
   m_EditorClassIdentifier: Unity.Behavior::Unity.Behavior.RuntimeBlackboardAsset
-  VersionTimestamp: 639300048499116356
+  VersionTimestamp: 639300102125734377
   AssetID:
     m_Value0: 6070447639584981926
     m_Value1: 3851064245641744921
@@ -4945,7 +5113,7 @@ MonoBehaviour:
   - rid: 6293314390623256817
   - rid: 6293314389425259174
   - rid: 8455035058607620825
-  m_VersionTimestamp: 639300048499116356
+  m_VersionTimestamp: 639300102125734377
   m_CommandBuffer:
     m_Commands: []
   m_RuntimeBlackboardAsset: {fileID: 1647689969320190158}

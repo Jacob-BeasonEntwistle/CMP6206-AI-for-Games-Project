@@ -20,7 +20,7 @@ public partial class ReturnToHiveAction : Action
     {
         float distance = Vector3.Distance(Bee.Value.transform.position, Hive.Value.transform.position);
 
-        if (distance > 1.0f)
+        if (distance > 0.01f)
         {
             Bee.Value.transform.position = Vector3.MoveTowards(
                 Bee.Value.transform.position,
