@@ -26,7 +26,7 @@ public partial class IdleAroundHiveAction : Action
 
     private Vector3 PickRandomPoint()
     {
-        Vector3 randomPoint = UnityEngine.Random.insideUnitSphere * (HiveInteractArea.Value - 0.1f);
+        Vector3 randomPoint = UnityEngine.Random.insideUnitSphere * (HiveInteractArea.Value);
         return Hive.Value.transform.position + new Vector3(randomPoint.x, 0, randomPoint.z);
     }
 
@@ -37,6 +37,7 @@ public partial class IdleAroundHiveAction : Action
         if (distance <= 1.0f)
         {
             point = PickRandomPoint();
+            point.y = 1.75f;
         }
 
         Bee.Value.transform.position = Vector3.MoveTowards(
@@ -45,7 +46,7 @@ public partial class IdleAroundHiveAction : Action
             Speed.Value * Time.deltaTime
         );
 
-        return Status.Success;
+        return Status.Running;
     }
 
     protected override void OnEnd()
