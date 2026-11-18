@@ -24,6 +24,10 @@ public class WormSpawner : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        // Removes any worms that have been destroyed (by the pigeon ai)
+        // Destroyed GameObjects become null references in the list so this removes those
+        worms.RemoveAll(w => w == null);
+
         // A constantly incrementing timer
         spawnTimer += Time.deltaTime;
 
@@ -31,11 +35,6 @@ public class WormSpawner : MonoBehaviour
         if (spawnTimer >= wormSpawnRate)
         {
             SpawnWorm();
-
-            if (worms.Count > 5)
-            {
-                worms.RemoveAt(0);
-            }
 
             // Reset the timer
             spawnTimer = 0;
@@ -52,6 +51,13 @@ public class WormSpawner : MonoBehaviour
 
         // Add the new instance to the list of worms
         worms.Add(wormInstance);
+
+        // Prevent more than 5 worms at any time
+        if (worms.Count > 5)
+        {
+            Destroy(worms[0]);
+            worms.RemoveAt(0);
+        }
 
         // Apply a little up force
         wormInstance.GetComponent<Rigidbody>().AddForce(wormPos.up * 100f);

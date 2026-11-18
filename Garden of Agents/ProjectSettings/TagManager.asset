@@ -6,9 +6,9 @@ TagManager:
   tags:
   - Worm
   - Ground
-  - Flower
   - Bee
   - Beehive
+  - FlowerBed
   layers:
   - Default
   - TransparentFX

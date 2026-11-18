@@ -2,15 +2,17 @@ using System.Threading;
 using Unity.VisualScripting;
 using UnityEngine;
 
-public enum FlowerType { Lavender, Sunflowers, Poppies };
+public enum FlowerType { None, Lavender, Sunflowers, Poppies };
 
 public class FlowerBed : MonoBehaviour
 {
-    [Header("FlowerBed Resources")]
-    public int currentNectarCount;
-    public int currentPollenCount;
+    [Header("Flower Meshes")]
+    [SerializeField] private GameObject lavenderPrefab;
+    [SerializeField] private GameObject sunflowerPrefab;
+    [SerializeField] private GameObject poppiesPrefab;
 
-    public float resourceTimer;
+    private Transform flowerTransform;
+    private Transform collectionPoint;
 
     [Header("Flower Stats")]
     public FlowerType type;
@@ -18,31 +20,46 @@ public class FlowerBed : MonoBehaviour
     public int flowerNectarCount;
     public int flowerPollenCount;
 
+    [Header("FlowerBed Resources")]
+    public int currentNectarCount;
+    public int currentPollenCount;
+
+    public float resourceTimer;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        // Setting the max nectar / pollen count
-        if (type == FlowerType.Lavender)
+        if (flowerTransform == null)
         {
-            flowerNectarCount = 100;
-            flowerPollenCount = 80;
+            flowerTransform = transform.Find("Flowers");
         }
 
-        if (type == FlowerType.Sunflowers)
+        // Setting the max nectar / pollen count and changing the appearance of the flowers
+        switch (type)
         {
-            flowerNectarCount = 60;
-            flowerPollenCount = 40;
+            case FlowerType.Lavender:
+                flowerNectarCount = 100;
+                flowerPollenCount = 80;
+
+                Instantiate(lavenderPrefab, flowerTransform);
+                break;
+            case FlowerType.Sunflowers:
+                flowerNectarCount = 60;
+                flowerPollenCount = 40;
+
+                Instantiate(sunflowerPrefab, flowerTransform);
+                break;
+            case FlowerType.Poppies:
+                flowerNectarCount = 30;
+                flowerPollenCount = 10;
+
+                Instantiate(poppiesPrefab, flowerTransform);
+                break;
         }
 
-        if (type == FlowerType.Poppies)
-        {
-            flowerNectarCount = 30;
-            flowerPollenCount = 10;
-        }
-
-        // Start the game with flower resources at half capacity
-        currentNectarCount = flowerNectarCount / 2;
-        currentPollenCount = flowerPollenCount / 2;
+        // Start the game with flower resources at max capacity
+        currentNectarCount = flowerNectarCount;
+        currentPollenCount = flowerPollenCount;
     }
 
     // Update is called once per frame
@@ -102,5 +119,11 @@ public class FlowerBed : MonoBehaviour
         {
             currentPollenCount = 0;
         }
+    }
+    public Transform GetFlowerCollectionPoint()
+    {
+        // First GetChild(0): "Flowers"
+        // Second GetChild(0): "Lavender/Sunflowers/Poppies"
+        return transform.GetChild(0).GetChild(0).Find("CollectionPoint"); ;
     }
 }

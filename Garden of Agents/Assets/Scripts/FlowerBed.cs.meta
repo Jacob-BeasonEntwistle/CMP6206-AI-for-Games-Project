@@ -1,2 +1,14 @@
 fileFormatVersion: 2
 guid: c3ce26d73155b6040b73832ad9ee4059
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - lavenderPrefab: {fileID: 6639188679493505555, guid: 200f1551140bf494e8ee4b7634f518f7, type: 3}
+  - sunflowerPrefab: {fileID: 327887871188074085, guid: 009e0372550cec6498a05b678f138d92, type: 3}
+  - poppiesPrefab: {fileID: 8883235806047672416, guid: dc3f10c32d516dc4a9a2e4f6ec20e2f7, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

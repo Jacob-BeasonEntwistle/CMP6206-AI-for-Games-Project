@@ -16,7 +16,7 @@ public partial class FindTargetFlowerAction : Action
 
         if (Flower.Value == null)
         {
-            Flower.Value = GameObject.FindWithTag("Flower");
+            Flower.Value = GameObject.FindWithTag("FlowerBed");
         }
 
         return Status.Running;

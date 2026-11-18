@@ -11,25 +11,30 @@ public partial class MoveToFlowerAction : Action
     [SerializeReference] public BlackboardVariable<GameObject> Bee;
     [SerializeReference] public BlackboardVariable<GameObject> Flower;
     [SerializeReference] public BlackboardVariable<float> Speed;
+
+    private Transform collectionPoint;
+
     protected override Status OnStart()
     {
         if (Flower.Value == null)
         {
-            Flower.Value = GameObject.FindWithTag("Flower");
+            Flower.Value = GameObject.FindWithTag("FlowerBed");
         }
+
+        collectionPoint = Flower.Value.GetComponent<FlowerBed>().GetFlowerCollectionPoint();
 
         return Status.Running;
     }
 
     protected override Status OnUpdate()
     {
-        float distance = Vector3.Distance(Bee.Value.transform.position, Flower.Value.transform.position);
+        float distance = Vector3.Distance(Bee.Value.transform.position, collectionPoint.position);
 
         if (distance > 1.0f)
         {
             Bee.Value.transform.position = Vector3.MoveTowards(
                 Bee.Value.transform.position,
-                Flower.Value.transform.position,
+                collectionPoint.position,
                 Speed.Value * Time.deltaTime
             );
 
