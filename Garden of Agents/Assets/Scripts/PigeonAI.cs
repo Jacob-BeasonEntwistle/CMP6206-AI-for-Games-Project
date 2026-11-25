@@ -7,31 +7,33 @@ public enum State { None, Wander, Land, WanderOnFoot, FindFood }
 
 public class PigeonAI : MonoBehaviour
 {
-    public State currentState;
+    [Header("Movement")]
+    [SerializeField] private float speed = 2f;
 
-    private Vector3 destination;
-    private float groundLevel = 0.5f;
-
-    private float speed = 2f;
-
+    [Header("Hunger")]
     private float maxHunger = 100f;
-    private float hunger;
     private float hungryThreshold = 40f;
+
     private bool reachedFood = false;
 
-    private bool isTired = false;
-    private bool isRested = true;
-    private bool isGrounded = false;
-    float energyTimer;
-    float restTimer;
+    [Header("World Values")]
+    [SerializeField] private Transform foodTarget;
+    [SerializeField] private GameObject ground;
+    private float groundLevel = 0.5f;
+
+    [Header("Debug")]
+    [SerializeField] private State currentState;
+    [SerializeField] private float hunger;
+    [SerializeField] private bool isTired = false;
+    private float energyTimer;
+    [SerializeField] private bool isRested = true;
+    private float restTimer;
+    [SerializeField] private bool isGrounded = false;
+    [SerializeField] private Vector3 destination;
 
     private float debugTimer = 1f;
-    private bool shownCurrentState = false;
-
-
-    public Transform foodTarget;
-
-    public GameObject ground;
+    //private bool shownCurrentState = false;
+    private State previousState;
 
     private void Start()
     {
@@ -51,7 +53,7 @@ public class PigeonAI : MonoBehaviour
             }
         }
 
-        // Prevents the pigeon heading straight for (0, 0, 0) on game start
+        // Prevents the FSM heading straight for (0, 0, 0) on game start
         destination = RandomPoint();
     }
 
@@ -74,10 +76,11 @@ public class PigeonAI : MonoBehaviour
                 break;
         }
 
-        if (shownCurrentState == false)
+        // State changes only logged when the FSM transitions to a new state
+        if (currentState != previousState)
         {
-            Debug.Log($"[{this.name}] Current State: {currentState}");
-            shownCurrentState = true;
+            Debug.Log($"[{name}] State changed: {previousState} -> {currentState}");
+            previousState = currentState;
         }
 
         hunger -= 1 * Time.deltaTime;
@@ -126,7 +129,7 @@ public class PigeonAI : MonoBehaviour
         );
     }
 
-    // Turns the pigeon AI to face the direction it's flying in
+    // Turns the FSM to face the direction it's flying in
     private void TurnToFace(Vector3 target)
     {
         // (transform.pos - destination because pigeon mesh is backwards)
@@ -155,7 +158,7 @@ public class PigeonAI : MonoBehaviour
 
         TurnToFace(destination);
 
-        // Move the pigeon towards the chosen destination at the set speed
+        // Move the FSM towards the chosen destination at the set speed
         transform.position = Vector3.MoveTowards(
             transform.position,
             destination,
@@ -231,8 +234,8 @@ public class PigeonAI : MonoBehaviour
         }
     }
 
-    // Could have "hunger" which ticks down and gives pigeon a reason to land
-    // Worm spotted, pigeon hunger bar a certain threshold, chase worm
+    // "Hunger" is a value that ticks down and gives FSM a reason to land
+    // Worm spotted -> FSM hunger bar a certain threshold? -> reach worm and eat
     public void FindFood()
     {
         // Looks for worm but doesn't crash if there is none
@@ -283,6 +286,8 @@ public class PigeonAI : MonoBehaviour
 
     private void Eat()
     {
+        reachedFood = false;
+
         hunger += 50f;
 
         Destroy(foodTarget.gameObject);
