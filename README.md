@@ -94,12 +94,23 @@ If the hive is low on food for the brood (bee younglings), bees will go out as p
 
 Individual bees could operate using local rules (memory, communication, resource evaluation, and collection), but collectively the behaviours could produce an adaptive colony capable of balancing survival and population growth.
 
+## Snail Research
+### How do snails navigate
+* Snails navigate their environment using a combination of sensory inputs
+* They utilise **chemoreception**, **photoreception**, **mechanoreception**, and **magnetic field detection**
+* These senses work together to help snails return to specific locations such as safe, damp, or shady spots
+
+* I could make a pathfinding agent that gets the scent level of the surrounding spaces and moves based on the highest value
+* Higher levels would indicate the direction that the food is in
+* Food emits a smell value that becomes weaker the further away it is
+
 # References
 1. Lists in C# - https://www.geeksforgeeks.org/c-sharp/c-sharp-adding-an-element-to-the-list/
 2. Instantiating Prefabs - https://learn.unity.com/tutorial/instantiate
 3. Looking towards a point - https://docs.unity3d.com/6000.6/Documentation/ScriptReference/Quaternion.LookRotation.html
 4. Bee Research - https://www.buzzedaboutbees.com/identifying-bees-behavior-of-bees
 5. Selecting a point in a sphere - https://docs.unity.com/en-us/engine/6000.6/script-reference/unityengine/random/insideunitsphere
+6. Snail Research - https://iere.org/how-far-can-snails-find-their-way-home/
 
 ## TODO: Add the following details and update regularly
 

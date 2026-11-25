@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 174247801243183427}
   - component: {fileID: 1734210634599219167}
   - component: {fileID: 1344081661324010496}
+  - component: {fileID: 4890974047014151594}
   m_Layer: 0
   m_Name: Beehive
   m_TagString: Beehive
@@ -110,3 +111,24 @@ MonoBehaviour:
   beePrefab: {fileID: 528464886833566828, guid: 2ef8b8d4dd7e25440ae8d752b7a9657e, type: 3}
   bees: []
   maxBees: 10
+--- !u!65 &4890974047014151594
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3894617819366804601}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 0.79999995, y: 0.8629382, z: 0.79999995}
+  m_Center: {x: 0.000000074505806, y: 0.43146917, z: -0.000000074505806}
