@@ -25,14 +25,10 @@ public class PathfindingGrid : MonoBehaviour {
 
 		maxScentLevel = 25;
 
+		// Create the grid and generate the food scent gradient
         CreateGrid();
 		GenerateFoodScent();
     }
-
-	void FixedUpdate()
-	{
-
-	}
 
 	void CreateGrid() {
 		grid = new Node[gridSizeX,gridSizeY];
@@ -50,6 +46,7 @@ public class PathfindingGrid : MonoBehaviour {
 		}
 	}
 
+	// Generates a gradient to show the scent area of the food
 	void GenerateFoodScent()
 	{
 		// For each node in the grid
@@ -112,7 +109,6 @@ public class PathfindingGrid : MonoBehaviour {
 		return grid[x,y];
 	}
 
-	public List<Node> path;
 	void OnDrawGizmos() {
 		// If there is no grid, return
 		if (grid == null) return;
@@ -154,11 +150,14 @@ public class PathfindingGrid : MonoBehaviour {
                 scentPercent
             );
 
+			// If the node isn't walkable
             if (!n.walkable)
             {
+				// Set the colour of the node to red
                 Gizmos.color = Color.red;
             }
 
+			// Set the transparency to 50%
 			Gizmos.color = new Color(Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 0.50f);
 
             // Draw a cube for each node in the grid
@@ -174,17 +173,23 @@ public class PathfindingGrid : MonoBehaviour {
 		return grid;
 	}
 
+	// Refresh the data within the grid to update the scent of the food
 	public void RefreshFoodData()
 	{
+		// Synchronises the physics engine with any Transform changes made via manual position/rotation updates
 		Physics.SyncTransforms();
 
+		// For each node in the grid
 		foreach (Node node in grid)
 		{
+			// If the node contains a food object
 			bool isFood = (Physics.CheckSphere(node.worldPosition, nodeRadius, foodMask));
 
+			// Set that node's food boolean to true
 			node.food = isFood;
         }
 
+		// Generate a new food scent gradient
 		GenerateFoodScent();
 	}
 }
