@@ -111,6 +111,7 @@ Individual bees could operate using local rules (memory, communication, resource
 4. Bee Research - https://www.buzzedaboutbees.com/identifying-bees-behavior-of-bees
 5. Selecting a point in a sphere - https://docs.unity.com/en-us/engine/6000.6/script-reference/unityengine/random/insideunitsphere
 6. Snail Research - https://iere.org/how-far-can-snails-find-their-way-home/
+7. Color.Lerp - https://docs.unity.com/en-us/engine/6000.0/script-reference/unityengine/color/lerp
 
 ## TODO: Add the following details and update regularly
 

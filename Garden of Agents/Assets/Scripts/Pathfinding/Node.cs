@@ -3,12 +3,12 @@ using System.Collections;
 
 public class Node {
 	
-	public bool walkable;
-	public bool food;
-	public int foodScentStrength;
-	public Vector3 worldPosition;
-	public int gridX;
-	public int gridY;
+	public bool walkable;			// States whether its a node that the agent can walk on
+	public bool food;				// States whether its a node containing a food source
+	public int scentLevel;			// The strength of the scent of a node
+	public Vector3 worldPosition;	// The node's world position
+	public int gridX;				// The node's x coordinate in the grid
+	public int gridY;               // The node's y coordinate in the grid
 
 	public int gCost;
 	public int hCost;
@@ -20,15 +20,6 @@ public class Node {
 		gridX = _gridX;
 		gridY = _gridY;
 		food = _food;
-
-		if (food)
-		{
-			foodScentStrength = 25;
-		}
-		else
-		{
-			foodScentStrength = 0;
-		}
 	}
 
 	public int fCost {
