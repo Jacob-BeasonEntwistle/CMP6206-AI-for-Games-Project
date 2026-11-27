@@ -23,7 +23,8 @@ public class PathfindingGrid : MonoBehaviour {
 		gridSizeX = Mathf.RoundToInt(gridWorldSize.x/nodeDiameter);
 		gridSizeY = Mathf.RoundToInt(gridWorldSize.y/nodeDiameter);
 
-		maxScentLevel = 25;
+		// Value large enough to ensure the food can be sensed from opposite points in the grid
+		maxScentLevel = 52;
 
 		// Create the grid and generate the food scent gradient
         CreateGrid();

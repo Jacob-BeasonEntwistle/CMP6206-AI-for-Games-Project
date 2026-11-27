@@ -9,6 +9,8 @@ TagManager:
   - Bee
   - Beehive
   - FlowerBed
+  - SnailFood
+  - Grid
   layers:
   - Default
   - TransparentFX

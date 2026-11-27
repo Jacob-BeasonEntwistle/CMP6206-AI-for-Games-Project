@@ -1,6 +1,7 @@
-using UnityEngine;
 using System.Collections.Generic;
 using UnityEditor.TerrainTools;
+using UnityEngine;
+using static UnityEngine.GraphicsBuffer;
 
 public class SnailAI : MonoBehaviour
 {
@@ -9,6 +10,11 @@ public class SnailAI : MonoBehaviour
     public Node previousNode;
 
     public float moveTimer;
+
+    public SnailFoodManager snailFoodManager;
+
+    public bool isEating;
+    public float eatingTimer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -28,15 +34,34 @@ public class SnailAI : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        moveTimer += Time.deltaTime;
-
-        // If the timer is greater than or equal to 2.0f
-        if (moveTimer >= 2.0f)
+        if (currentNode.food)
         {
-            // Find the next node to move to
-            FindStrongestScent();
-            // Reset timer
-            moveTimer = 0;
+            isEating = true;
+            grid.RefreshFoodData();
+        }
+
+        if (!isEating)
+        {
+            moveTimer += Time.deltaTime;
+
+            // If the timer is greater than or equal to 2.0f
+            if (moveTimer >= 2.0f)
+            {
+                // Find the next node to move to
+                FindStrongestScent();
+                // Reset timer
+                moveTimer = 0;
+            }
+        }
+        else
+        {
+            eatingTimer += Time.deltaTime;
+
+            if (eatingTimer >= 10.0f)
+            {
+                isEating = false;
+                eatingTimer = 0;
+            }
         }
     }
 
@@ -83,9 +108,18 @@ public class SnailAI : MonoBehaviour
     // Moves the agent to the next node
     private void MoveToNextNode(Node nextNode)
     {
+        // Get the position of the next node and work out the rotation needed to face it
+        Quaternion rotation = Quaternion.LookRotation(nextNode.worldPosition - transform.position, Vector3.up);
+        // Apply the rotation to the agents current rotation
+        transform.rotation = rotation;
         // Set the position of the agent to the next node's position
         transform.position = nextNode.worldPosition;
         // Set the current node to the next node in order to reset the movement process
         currentNode = nextNode;
+    }
+
+    public bool GetIsEating()
+    {
+        return isEating;
     }
 }

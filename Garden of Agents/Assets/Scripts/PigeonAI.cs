@@ -132,8 +132,9 @@ public class PigeonAI : MonoBehaviour
     // Turns the FSM to face the direction it's flying in
     private void TurnToFace(Vector3 target)
     {
-        // (transform.pos - destination because pigeon mesh is backwards)
-        Quaternion rotation = Quaternion.LookRotation(transform.position - target, Vector3.up);
+        // Get the required rotation needed to face the target position
+        Quaternion rotation = Quaternion.LookRotation(target - transform.position, Vector3.up);
+        // Apply the rotation to the object
         transform.rotation = rotation;
         
         // Use this to slowly turn towards location - might be useful for realistic turning
